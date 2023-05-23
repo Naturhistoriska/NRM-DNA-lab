@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: tis maj 23, 2023  05:10
+- Last modified: tis maj 23, 2023  05:17
 - Sign: JN
 
 ## Standard data flows
@@ -10,10 +10,11 @@
 ## Personal checklist to get started
 
 - [ ] Account on GitHub (<https://github.com/>)
-- [ ] Member of Naturhistoriska organization (<https://github.com/Naturhistoriska>)(ask Dept. head)
+- [ ] Member of Naturhistoriska organization (<https://github.com/Naturhistoriska>) (ask Dept. head)
 - [ ] MobaXterm or (recommended) WSL2 installed on your NRM Windows machine (<https://learn.microsoft.com/en-us/windows/wsl/install>)
 - [ ] Accounts on Msl1, Galaxy, Junior (ask JN)
-- [ ] Account on nrmdna01.nrm.se (ask IT)
+- [ ] Account on nrmdna01.nrm.se (ask NRM IT)
+- [ ] Functioning (NRM) VPN client if working remotely (consult NRM IT)
 - [ ] Personal account on uppmax (<https://www.uppmax.uu.se/support/getting-started/applying-for-a-user-account/>)
 - [ ] Member of projects `p_nrmdnalab_storage` and `p_nrmdnalab` on rackham (uppmax)
 
