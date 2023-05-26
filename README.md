@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: fre maj 26, 2023  12:17
+- Last modified: fre maj 26, 2023  01:05
 - Sign: JN
 
 ---
@@ -8,13 +8,13 @@
 ## Personal checklist to get started
 
 - [ ] Account on GitHub (<https://github.com/>)
-- [ ] Member of Naturhistoriska organization (<https://github.com/Naturhistoriska>) (Send [Bestallningsblankett-2017-V2.pdf](doc/Bestallningsblankett-2017-V2.pdf) to Dept. head)
+- [ ] Member of Naturhistoriska organization (<https://github.com/Naturhistoriska>) (Fill out [Bestallningsblankett-2017-V2.pdf](doc/Bestallningsblankett-2017-V2.pdf) (don't forget your GitHub user name) and send to Dept. head. Tell JN when approved.)
 - [ ] MobaXterm or (recommended) WSL2 installed on your NRM Windows machine (<https://learn.microsoft.com/en-us/windows/wsl/install>)
-- [ ] Accounts on Msl1, Galaxy, Junior (ask JN)
-- [ ] Account on nrmdna01.nrm.se (ask NRM IT)
+- [ ] Accounts on Msl1.nrm.se, Galaxy.nrm.se, Junior.nrm.se (ask JN)
+- [ ] Account on nrmdna01.nrm.se (ask NRM IT. You need to provide "your public ed25519 SSH key" (ask JN))
 - [ ] Functioning (NRM) VPN client if working remotely (consult NRM IT)
 - [ ] Personal account on uppmax (<https://www.uppmax.uu.se/support/getting-started/applying-for-a-user-account/>)
-- [ ] Member of projects `p_nrmdnalab_storage` and `p_nrmdnalab` on rackham (uppmax)
+- [ ] Member of projects `p_nrmdnalab_storage` and `p_nrmdnalab` on rackham (uppmax, ask JN or BC)
 
 ---
 
