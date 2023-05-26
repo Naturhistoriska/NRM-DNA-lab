@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: tor maj 25, 2023  04:36
+- Last modified: fre maj 26, 2023  12:17
 - Sign: JN
 
 ---
@@ -8,7 +8,7 @@
 ## Personal checklist to get started
 
 - [ ] Account on GitHub (<https://github.com/>)
-- [ ] Member of Naturhistoriska organization (<https://github.com/Naturhistoriska>) (ask Dept. head)
+- [ ] Member of Naturhistoriska organization (<https://github.com/Naturhistoriska>) (Send [Bestallningsblankett-2017-V2.pdf](doc/Bestallningsblankett-2017-V2.pdf) to Dept. head)
 - [ ] MobaXterm or (recommended) WSL2 installed on your NRM Windows machine (<https://learn.microsoft.com/en-us/windows/wsl/install>)
 - [ ] Accounts on Msl1, Galaxy, Junior (ask JN)
 - [ ] Account on nrmdna01.nrm.se (ask NRM IT)
