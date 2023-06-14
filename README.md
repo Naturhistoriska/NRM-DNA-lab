@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: tor jun 01, 2023  03:24
+- Last modified: ons jun 14, 2023  04:34
 - Sign: JN
 
 ---
@@ -13,17 +13,20 @@
   [Bestallningsblankett-2017-V2.pdf](doc/Bestallningsblankett-2017-V2.pdf)
   (don't forget your GitHub user name) and send to Dept. head. Tell JN when
   approved.)
-- [ ] MobaXterm or (recommended) WSL2 installed on your NRM Windows machine
-  (<https://learn.microsoft.com/en-us/windows/wsl/install>)
+- [ ] MobaXterm, PuTTY, or (recommended) WSL2 installed on your NRM Windows
+  machine (<https://learn.microsoft.com/en-us/windows/wsl/install>)
 - [ ] Accounts on Msl1.nrm.se, Galaxy.nrm.se, Junior.nrm.se (ask JN)
 - [ ] Account on nrmdna01.nrm.se (ask NRM IT. You need to provide "your public
-  ed25519 SSH key" (ask JN))
+  ed25519 SSH key" (see [ssh.md](doc/ssh.md) or ask JN))
 - [ ] Functioning (NRM) VPN client if working remotely (consult NRM IT)
 - [ ] Personal account on uppmax
-  (<https://www.uppmax.uu.se/support/getting-started/applying-for-a-user-account/>)
+  (<https://www.uppmax.uu.se/support/getting-started/applying-for-a-user-account/>).
+  Here is a link for practicing working on uppmax resources:
+  <https://uppsala.instructure.com/courses/67267>.
 - [ ] Member of projects `p_nrmdnalab_storage` and `p_nrmdnalab` on rackham
   (uppmax, ask JN or BC)
-- [ ] Start to learn and use documentation in [Markdown syntax](https://www.markdownguide.org/getting-started/).
+- [ ] Start to learn and use documentation in [Markdown
+  syntax](https://www.markdownguide.org/getting-started/).
 
 ---
 
@@ -116,7 +119,7 @@ downstream analyses. See, e.g., "Analyses (e.g., mapping)"
 - Text 1
 - Text 2
 
-#### 6.2.
+#### 6.2. Working with links
 
 After the cleaning, we can create links to the cleaned data (instead of
 copying) each time we need to re-use them for a task.  At this stage (*if* we
@@ -148,7 +151,9 @@ data can be used as input.
 ### 8. Copy files from rackham to NRM computers
 
 The best strategy is to log in to a NRM computer, and then "drag" the files
-from rackham. The preferred tools are either `rsync` or `scp`.
+from rackham. The preferred tools are either `rsync` or `scp`.  In order for
+scp to work smoothly, passwordless ssh should be set up between the computers.
+See [ssh.md](doc/ssh.md).
 
 #### scp
 
@@ -177,4 +182,13 @@ both locations, but you want to transfer all files added in the rackham copy to
 msl1. Again, and example:
 
     [msl1]$ rsync -avh usernameonrackham@rackham.uppmax.uu.se:/proj/nrmdnalab_storage/nobackup/my_folder/ my_folder
+
+
+### 10. Data submission to public databases
+
+
+- INSDC <https://www.insdc.org/>
+- Genbank <https://www.ncbi.nlm.nih.gov/genbank/submit_types/>
+- ENA <https://www.ebi.ac.uk/ena/browser/submit>
+- ENA Webin-CLI <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html>
 
