@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: ons jun 14, 2023  04:34
+- Last modified: tor jun 15, 2023  11:26
 - Sign: JN
 
 ---
@@ -102,7 +102,6 @@ Steps
   bioinfo-tools dds-cli`
 - Start the client: `dds`
 
-
 ### 5. Quality Control of Illumina data
 
 - Check data QC information from NGI
@@ -127,14 +126,25 @@ have made md5sum-verified backups), we can also delete the raw data.
 
 Create (symbolic/soft) links from the folder in `$DIR` to the current working directory:
 
-        $ mkdir -p /path/to/folder/where/links/are/to/be/created
-        $ cd /path/to/folder/where/links/are/to/be/created
-        $ find /path/to/folder/whith/fastq.gz/files/ -type f -name '*.fastq.gz' -exec ln -s {} . \;
-
+    $ mkdir -p /path/to/folder/where/links/are/to/be/created
+    $ cd /path/to/folder/where/links/are/to/be/created
+    $ find /path/to/folder/whith/fastq.gz/files/ -type f -name '*.fastq.gz' -exec ln -s {} . \;
 
 ### 7. Analyses
 
-#### 8. Short-read mapping to reference
+#### 7.1. Create a data sheet from the sequence delivery
+
+Many workflows require a data sheet for specifying input data. This script
+[create_sample_sheet.pl](https://gist.github.com/nylander/287d1f47c669a350c2e7b97a3da58df5#file-create_sample_sheet-pl)
+can help as a start. Steps:
+
+0. Download the script and view options (`create_sample_sheet.pl --help`)
+1. Change directory to the delivery folder (e.g., `cd P27213`)
+2. Assuming there is a file `00-Reports/*_sample_info.txt`, run the script:
+        $ create_sample_sheet.pl 00-Reports/*_sample_info.txt > sample_sheet.tsv
+3. Go through the output (`sample_sheet.tsv`), and edit as needed.
+
+#### 7.2. Short-read mapping to reference
 
 We have used, to some success, the nf-co.re/eager
 (<https://github.com/nf-core/eager>)  pipeline for this task. It was tailored
