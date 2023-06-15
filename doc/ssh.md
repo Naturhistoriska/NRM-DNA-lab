@@ -1,6 +1,6 @@
 # SSH
 
-- Last modified: tis jun 13, 2023  05:26
+- Last modified: tor jun 15, 2023  11:32
 - Sign: JN
 
 ## Description
@@ -56,5 +56,8 @@ Alternatively, this command can be used
 Access is only allowed after e-mailing your public key to support@nrm.se. IT
 will then create your user account and manually add the key to
 `$HOME/.ssh/authorized_keys`.
+
+Once you have access with one computer (one public ed25519 key), you can add
+more keys to the file `$HOME/.ssh/authorized_keys`.
 
 
