@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: tor jun 15, 2023  11:26
+- Last modified: ons jul 12, 2023  01:22
 - Sign: JN
 
 ---
@@ -39,7 +39,7 @@
 Meta data about the samples. This information in crucial in the workflows, and
 will be used in the submission step.
 
-- Text 1
+- Use the sample list from ENA as a template (link: <>)
 - Text 2
 
 ### 2. Ordering sequences from SciLifeLab/NGI
@@ -77,6 +77,11 @@ Steps
   probably want to download the script `check_md5sums.sh`, put it in your
   `$HOME/bin`, and make it executable.)
 - Exit the screen session  (`exit`)
+- If you have created a folder for a PI, then the user- and group permissions are set to you.
+Make sure others have read permissions to all files and folders. For example:
+
+        $ chmod -R o+r /projects/BIO-projects/piname
+        $ find /projects/BIO-projects/piname -type d -exec chmod o+rx {} \;
 
 ### 4. Data download from NGI to rackham
 
@@ -196,9 +201,9 @@ msl1. Again, and example:
 
 ### 10. Data submission to public databases
 
-
 - INSDC <https://www.insdc.org/>
 - Genbank <https://www.ncbi.nlm.nih.gov/genbank/submit_types/>
 - ENA <https://www.ebi.ac.uk/ena/browser/submit>
 - ENA Webin-CLI <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html>
+- Example [ENA-submission of raw reads](doc/ENA-submission/README.md)
 
