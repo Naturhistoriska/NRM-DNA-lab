@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: ons aug 30, 2023  01:32
+- Last modified: ons aug 30, 2023  02:04
 - Sign: JN
 
 ---
@@ -71,6 +71,7 @@ Detailed information for each field can be found in the step 3. above.
 #### Documentation
 
 - <https://ena-docs.readthedocs.io/en/latest/submit/general-guide.html>
+- <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html>
 
 ### 2. Ordering sequences from SciLifeLab/NGI
 
