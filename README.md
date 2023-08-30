@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: ons jul 12, 2023  01:22
+- Last modified: ons aug 30, 2023  01:32
 - Sign: JN
 
 ---
@@ -39,8 +39,38 @@
 Meta data about the samples. This information in crucial in the workflows, and
 will be used in the submission step.
 
-- Use the sample list from ENA as a template (link: <>)
-- Text 2
+A sample template for submitting data to ENA can be downloaded through ENA's [Webin portal](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/submissions-portal.html) 
+
+The use of the Webin portal (<https://www.ebi.ac.uk/ena/submit/webin/login>) requires registration, and the NRM DNA-lab have an account (ask!).
+
+1. Log in to the Webin portal, and under `Samples`, click on `Register
+   Samples`. On the next page, click on `Download spreadsheet to register
+   samples`.
+2. For a "standard" analysis (e.g. WGS from several samples), choose `Other
+   Checklists`. Then the `ENA default sample checklist` would be appropriate
+   for most studies.
+3. Select the fields applicable. Pay attention to the mandatory fields and the
+   section of Optional Fields. Some/many of the Optional fields can be vary
+   valuable to collect in one place.). Then click on `Next`, followed by
+   `Download TSV Template`.  An example of the minimal ENA sample tsv template
+   file (ons 30 aug 2023 13:10:40) can be found here:
+   [`ENA-default_sample_checklist.tsv`](doc/ENA-submission/ENA_default_sample_checklist.tsv),
+   and a submitted sample checklist can be found here:
+   [`ENA_sample_checklist_Azure.tsv`](doc/ENA-submission/ENA_sample_checklist_Azure.tsv).
+4. Open the file in, e.g., Excel and add samples.
+
+Detailed information for each field can be found in the step 3. above.
+
+**Important**
+- For `Sample alias`, don't use special characters or white space
+- New taxon? Use a place-holder name, e.g., `Genus sp_nov_1`. More details on
+  new taxa can be found here:
+  <https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html>.
+- [TODO: provide more detailed advise]()
+
+#### Documentation
+
+- <https://ena-docs.readthedocs.io/en/latest/submit/general-guide.html>
 
 ### 2. Ordering sequences from SciLifeLab/NGI
 

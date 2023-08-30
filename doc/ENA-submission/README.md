@@ -1,6 +1,6 @@
 # README.md
 
-- Last modified: ons jul 12, 2023  04:46
+- Last modified: tor jul 13, 2023  11:48
 - Sign: nylander
 
 ## Description
@@ -69,8 +69,8 @@ Note: `parallel` is currently, 12 jul 2023, not installed globally on nrmdna01.n
         $ screen -S ena
         $ mypassword="XXXX"
         $ lftp -e "set ftp:ssl-allow off;" -u Webin-65361,"$mypassword" webin2.ebi.ac.uk
-        ftp> mirror -v -c -R -P 10 -L --dry-run -f *.fastq.gz
-        ftp> mirror -v -c -R -P 10 -L -f *.fastq.gz
+        lftp> mirror -v -p -c -R -P 10 -L --dry-run -f *.fastq.gz
+        lftp> mirror -v -p -c -R -P 10 -L -f *.fastq.gz
 
 **ons 12 jul 2023 16:45:59**
 
