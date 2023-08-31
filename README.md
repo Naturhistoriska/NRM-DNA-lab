@@ -1,6 +1,6 @@
 # NRM DNA lab
 
-- Last modified: ons aug 30, 2023  02:04
+- Last modified: tor aug 31, 2023  12:35
 - Sign: JN
 
 ---
@@ -39,9 +39,13 @@
 Meta data about the samples. This information in crucial in the workflows, and
 will be used in the submission step.
 
-A sample template for submitting data to ENA can be downloaded through ENA's [Webin portal](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/submissions-portal.html) 
+A sample template for submitting data to ENA can be downloaded through ENA's
+[Webin
+portal](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/submissions-portal.html) 
 
-The use of the Webin portal (<https://www.ebi.ac.uk/ena/submit/webin/login>) requires registration, and the NRM DNA-lab have an account (ask!).
+The use of the Webin portal (<https://www.ebi.ac.uk/ena/submit/webin/login>)
+requires registration (adding e-mail addresses for users), and the NRM DNA-lab
+have an account (**Webin-65361**. Ask around for the password).
 
 1. Log in to the Webin portal, and under `Samples`, click on `Register
    Samples`. On the next page, click on `Download spreadsheet to register
