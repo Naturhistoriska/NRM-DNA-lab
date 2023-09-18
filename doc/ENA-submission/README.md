@@ -1,6 +1,6 @@
 # README.md
 
-- Last modified: tor jul 13, 2023  11:48
+- Last modified: mån sep 18, 2023  02:17
 - Sign: nylander
 
 ## Description
@@ -27,10 +27,11 @@
    `fastq2_template_1689156046753.tsv`). Template file can be downloaded here:
    <https://www.ebi.ac.uk/ena/submit/webin/read-submission> (then choose type.
    For example, "Submit paired reads using two Fastq files").  Important: We
-   assume that the columns `forward_file_md5` and `reverse_file_md5` are empty, but that the rest of the columns (especially file names) are filled in!
-   We wish to calculate md5 sums and upload the filenames in that file to ENA,
-   and then add those descriptions to the file.  After read files are uploaded,
-   the tsv file is uploaded and all files are validated.
+   assume that the columns `forward_file_md5` and `reverse_file_md5` are empty,
+   but that the rest of the columns (especially file names) are filled in!  We
+   wish to calculate md5 sums and upload the filenames in that file to ENA, and
+   then add those descriptions to the file.  After read files are uploaded, the
+   tsv file is uploaded and all files are validated.
 
 2. Gather files as symlinks into one folder
 
@@ -72,8 +73,7 @@ Note: `parallel` is currently, 12 jul 2023, not installed globally on nrmdna01.n
         lftp> mirror -v -p -c -R -P 10 -L --dry-run -f *.fastq.gz
         lftp> mirror -v -p -c -R -P 10 -L -f *.fastq.gz
 
-**ons 12 jul 2023 16:45:59**
-
+**ons 12 jul 2023 16:45:59: IT have not yet allowed lftp from nrmdna01.nrm.se**
 
 6. Upload and validate tsv file
 
