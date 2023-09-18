@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard workflows
 
-- Last modified: mån sep 18, 2023  02:38
+- Last modified: mån sep 18, 2023  02:43
 - Sign: JN
 
 ---
@@ -32,6 +32,7 @@
 - [ ] Start to learn and use documentation in [Markdown
   syntax](https://www.markdownguide.org/getting-started/).
 
+---
 
 ## 1. Securing meta data from user
 
@@ -46,7 +47,7 @@ The use of the Webin portal (<https://www.ebi.ac.uk/ena/submit/webin/login>)
 requires registration (adding e-mail addresses for users), and the NRM DNA-lab
 have an account (**Webin-65361**. Ask around for the password).
 
-Steps
+### Steps
 
 1. Log in to the Webin portal, and under `Samples`, click on `Register
    Samples`. On the next page, click on `Download spreadsheet to register
@@ -73,25 +74,25 @@ Detailed information for each field can be found in the step 3. above.
   <https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html>.
 - [TODO: provide more detailed advise]()
 
-Links
+### Links
 
 - <https://ena-docs.readthedocs.io/en/latest/submit/general-guide.html>
 - <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html>
 
 ## 2. Ordering sequences from SciLifeLab/NGI
 
-Steps
+### Steps
 
 - Text 1
 - Text 2
 
-Links
+### Links
 
 - <https://ngisweden.scilifelab.se/>
 
 ## 3. Data download from NGI to NRM-backup using DDS
 
-Steps
+### Steps
 
 - Login to `nrmdna01.nrm.se` using your NRM credentials
 - Change to relevant directory (create one if necessary). Note: the current
@@ -118,7 +119,7 @@ Make sure others have read permissions to all files and folders. For example:
         $ chmod -R o+r /projects/BIO-projects/piname
         $ find /projects/BIO-projects/piname -type d -exec chmod o+rx {} \;
 
-Links
+### Links
 
 - <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
 - <https://scilifelabdatacentre.github.io/dds_cli/>
@@ -127,7 +128,7 @@ Links
 
 - <https://scilifelabdatacentre.github.io/dds_cli/>
 
-Steps
+### Steps
 
 - If the PI have a storage and/or compute account on rackham, make sure to be
   added to the project (apply on <https://supr.naiss.se>). Otherwise, make sure
@@ -144,7 +145,7 @@ Steps
   bioinfo-tools dds-cli`
 - Start the client: `dds`
 
-Links
+### Links
 
 - <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
 
@@ -153,24 +154,24 @@ Links
 - Check data QC information from NGI
 - Run our own data QC
 
-Steps
+### Steps
 
 - Text
 - Text
 
-Links
+### Links
 
 ## 6. Data cleaning, merging, etc
 
 Note: this step may or may not be necessary depending on the choice of
 downstream analyses.
 
-Steps
+### Steps
 
 - Text 1
 - Text 2
 
-Links
+### Links
 
 <https://github.com/nylander/fastp-cleaning>
 
@@ -203,17 +204,24 @@ can help as a start. Steps:
 ### 7.2. Short-read mapping to reference
 
 We have used, to some success, the nf-co.re/eager
-(<https://github.com/nf-core/eager>)  pipeline for this task. It was tailored
+(<https://github.com/nf-core/eager>) pipeline for this task. It was tailored
 for low-quality or ancient DNA, but can be used for fresh material (Illumina
 fastq) as well.  The workflow includes a cleaning and filtering step, so raw
 data can be used as input.
 
 See also: <https://github.com/sanger-tol/readmapping>
 
+#### Steps
+
 - Prepare a sample sheet ([example](doc/eager-data.tsv))
 - Visit <https://nf-co.re/eager>
 - Text 1
 - Text 2
+
+#### Links
+
+- <https://github.com/nf-core/eager>
+- <https://github.com/sanger-tol/readmapping>
 
 ## 8. Copy files from rackham to NRM computers
 
@@ -252,11 +260,11 @@ msl1. Again, and example:
 
 ## 10. Data submission to public databases
 
-Steps
+### Steps
 
 - Example [ENA-submission of raw reads](doc/ENA-submission/README.md)
 
-Links
+### Links
 
 - ENA <https://www.ebi.ac.uk/ena/browser/submit>
 - ENA Webin-CLI <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html>
