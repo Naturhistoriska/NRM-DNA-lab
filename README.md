@@ -1,9 +1,13 @@
 # NRM DNA lab - Standard workflows
 
-- Last modified: mån sep 18, 2023  02:36
+- Last modified: mån sep 18, 2023  02:38
 - Sign: JN
 
+---
+
 ![Standard data flows](img/Diagram1.png)
+
+---
 
 ### Personal checklist
 
