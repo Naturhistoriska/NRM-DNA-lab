@@ -1,11 +1,11 @@
-# NRM DNA lab
+# NRM DNA lab - Standard workflows
 
-- Last modified: tor aug 31, 2023  12:35
+- Last modified: mån sep 18, 2023  02:36
 - Sign: JN
 
----
+![Standard data flows](img/Diagram1.png)
 
-## Personal checklist to get started
+### Personal checklist
 
 - [ ] Account on GitHub (<https://github.com/>)
 - [ ] Member of Naturhistoriska organization
@@ -28,13 +28,8 @@
 - [ ] Start to learn and use documentation in [Markdown
   syntax](https://www.markdownguide.org/getting-started/).
 
----
 
-## Standard data flows
-
-![](img/Diagram1.png)
-
-### 1. Securing meta data from user
+## 1. Securing meta data from user
 
 Meta data about the samples. This information in crucial in the workflows, and
 will be used in the submission step.
@@ -46,6 +41,8 @@ portal](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/submissio
 The use of the Webin portal (<https://www.ebi.ac.uk/ena/submit/webin/login>)
 requires registration (adding e-mail addresses for users), and the NRM DNA-lab
 have an account (**Webin-65361**. Ask around for the password).
+
+Steps
 
 1. Log in to the Webin portal, and under `Samples`, click on `Register
    Samples`. On the next page, click on `Download spreadsheet to register
@@ -72,24 +69,23 @@ Detailed information for each field can be found in the step 3. above.
   <https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html>.
 - [TODO: provide more detailed advise]()
 
-#### Documentation
+Links
 
 - <https://ena-docs.readthedocs.io/en/latest/submit/general-guide.html>
 - <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html>
 
-### 2. Ordering sequences from SciLifeLab/NGI
+## 2. Ordering sequences from SciLifeLab/NGI
 
-<https://ngisweden.scilifelab.se/>
+Steps
 
 - Text 1
 - Text 2
 
-### 3. Data download from NGI to NRM-backup using DDS
-
 Links
 
-- <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
-- <https://scilifelabdatacentre.github.io/dds_cli/>
+- <https://ngisweden.scilifelab.se/>
+
+## 3. Data download from NGI to NRM-backup using DDS
 
 Steps
 
@@ -118,11 +114,13 @@ Make sure others have read permissions to all files and folders. For example:
         $ chmod -R o+r /projects/BIO-projects/piname
         $ find /projects/BIO-projects/piname -type d -exec chmod o+rx {} \;
 
-### 4. Data download from NGI to rackham
-
 Links
 
 - <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
+- <https://scilifelabdatacentre.github.io/dds_cli/>
+
+## 4. Data download from NGI to rackham
+
 - <https://scilifelabdatacentre.github.io/dds_cli/>
 
 Steps
@@ -142,23 +140,37 @@ Steps
   bioinfo-tools dds-cli`
 - Start the client: `dds`
 
-### 5. Quality Control of Illumina data
+Links
+
+- <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
+
+## 5. Quality Control of Illumina data
 
 - Check data QC information from NGI
-- Run our own data QC (see also below)
+- Run our own data QC
+
+Steps
+
+- Text
 - Text
 
-### 6. Data cleaning, merging, etc
+Links
+
+## 6. Data cleaning, merging, etc
 
 Note: this step may or may not be necessary depending on the choice of
-downstream analyses. See, e.g., "Analyses (e.g., mapping)"
+downstream analyses.
 
-<https://github.com/nylander/fastp-cleaning>
+Steps
 
 - Text 1
 - Text 2
 
-#### 6.2. Working with links
+Links
+
+<https://github.com/nylander/fastp-cleaning>
+
+### 6.2. Working with links instead of files
 
 After the cleaning, we can create links to the cleaned data (instead of
 copying) each time we need to re-use them for a task.  At this stage (*if* we
@@ -170,9 +182,9 @@ Create (symbolic/soft) links from the folder in `$DIR` to the current working di
     $ cd /path/to/folder/where/links/are/to/be/created
     $ find /path/to/folder/whith/fastq.gz/files/ -type f -name '*.fastq.gz' -exec ln -s {} . \;
 
-### 7. Analyses
+## 7. Analyses
 
-#### 7.1. Create a data sheet from the sequence delivery
+### 7.1. Create a data sheet from the sequence delivery
 
 Many workflows require a data sheet for specifying input data. This script
 [create_sample_sheet.pl](https://gist.github.com/nylander/287d1f47c669a350c2e7b97a3da58df5#file-create_sample_sheet-pl)
@@ -184,7 +196,7 @@ can help as a start. Steps:
         $ create_sample_sheet.pl 00-Reports/*_sample_info.txt > sample_sheet.tsv
 3. Go through the output (`sample_sheet.tsv`), and edit as needed.
 
-#### 7.2. Short-read mapping to reference
+### 7.2. Short-read mapping to reference
 
 We have used, to some success, the nf-co.re/eager
 (<https://github.com/nf-core/eager>)  pipeline for this task. It was tailored
@@ -192,27 +204,28 @@ for low-quality or ancient DNA, but can be used for fresh material (Illumina
 fastq) as well.  The workflow includes a cleaning and filtering step, so raw
 data can be used as input.
 
-- Prepare a sample sheat ([example](doc/eager-data.tsv))
+See also: <https://github.com/sanger-tol/readmapping>
+
+- Prepare a sample sheet ([example](doc/eager-data.tsv))
 - Visit <https://nf-co.re/eager>
 - Text 1
 - Text 2
 
-
-### 8. Copy files from rackham to NRM computers
+## 8. Copy files from rackham to NRM computers
 
 The best strategy is to log in to a NRM computer, and then "drag" the files
 from rackham. The preferred tools are either `rsync` or `scp`.  In order for
 scp to work smoothly, passwordless ssh should be set up between the computers.
 See [ssh.md](doc/ssh.md).
 
-#### scp
+### scp
 
 Example when logged in to `msl1.nrm.se`: transfer one file from rackham to
 current working directory.
 
     [msl1]$ scp usernameonrackham@rackham.uppmax.uu.se:/proj/nrmdnalab_storage/nobackup/metadata.txt .
 
-#### rsync
+### rsync
 
 Example when logged in to `msl1.nrm.se`: transfer one directory (with all
 content, recursively) from rackham to current working directory.
@@ -221,7 +234,7 @@ content, recursively) from rackham to current working directory.
 
 **Note** The command above will transfer any content of `my_folder` from
 rackham to msl1. If the folder doesn't already exist on msl1, it will be
-created.  A subtle change in behaviour can be made (see traling `/` on the
+created.  A subtle change in behaviour can be made (see trailing `/` on the
 source directory in the example below), in order for all files in `my_folder`
 to be transferred, but not the folder itself!
 
@@ -233,12 +246,16 @@ msl1. Again, and example:
 
     [msl1]$ rsync -avh usernameonrackham@rackham.uppmax.uu.se:/proj/nrmdnalab_storage/nobackup/my_folder/ my_folder
 
+## 10. Data submission to public databases
 
-### 10. Data submission to public databases
+Steps
 
-- INSDC <https://www.insdc.org/>
-- Genbank <https://www.ncbi.nlm.nih.gov/genbank/submit_types/>
+- Example [ENA-submission of raw reads](doc/ENA-submission/README.md)
+
+Links
+
 - ENA <https://www.ebi.ac.uk/ena/browser/submit>
 - ENA Webin-CLI <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html>
-- Example [ENA-submission of raw reads](doc/ENA-submission/README.md)
+- Genbank <https://www.ncbi.nlm.nih.gov/genbank/submit_types/>
+- INSDC <https://www.insdc.org/>
 
