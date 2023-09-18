@@ -1,6 +1,6 @@
 # SSH
 
-- Last modified: tor jun 15, 2023  11:32
+- Last modified: mån sep 18, 2023  02:28
 - Sign: JN
 
 ## Description
@@ -41,9 +41,12 @@ The generated key pair is located in XXX.
 
 ## Set up passwordless ssh communication
 
-If you want to connect to a remote computer with ssh, and without having to manually type your password, you can utilize the ssh key pair.
-Simply add content of the public key, `id_ed25519.pub`, to the file `$HOME/.ssh/authorized_keys` on the server you wish to connect to.
-This can be done manually using cut-and-paste, or, for example, with this command (issued on your local computer where we have the generated key pair):
+If you want to connect to a remote computer with ssh, and without having to
+manually type your password, you can utilize the ssh key pair.  Simply add
+content of the public key, `id_ed25519.pub`, to the file
+`$HOME/.ssh/authorized_keys` on the server you wish to connect to.  This can be
+done manually using cut-and-paste, or, for example, with this command (issued
+on your local computer where we have the generated key pair):
 
     $ ssh-copy-id -i ~/.ssh/id_ed25519.pub user@remote.computer.com
 
