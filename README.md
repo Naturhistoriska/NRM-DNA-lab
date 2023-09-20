@@ -36,7 +36,7 @@
 
 ## 1. Securing meta data from user
 
-Meta data about the samples. This information in crucial in the workflows, and
+Meta data about the samples. This information is crucial in the workflows, and
 will be used in the submission step.
 
 A sample template for submitting data to ENA can be downloaded through ENA's
