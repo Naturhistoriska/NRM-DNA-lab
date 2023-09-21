@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard workflows
 
-- Last modified: mån sep 18, 2023  02:43
+- Last modified: tor sep 21, 2023  03:21
 - Sign: JN
 
 ---
@@ -121,6 +121,7 @@ Make sure others have read permissions to all files and folders. For example:
 
 ### Links
 
+- Examples using dds ([dds.md](doc/dds.md))
 - <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
 - <https://scilifelabdatacentre.github.io/dds_cli/>
 
