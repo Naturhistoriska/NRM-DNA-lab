@@ -1,9 +1,13 @@
 # Using the dds client
 
-- Last modified: tor sep 21, 2023  03:47
+- Last modified: tis sep 26, 2023  03:09
 - Sign: JN
 
 ## Examples
+
+**Note** You need to supply your registered user, password, and one-time-code
+(code send by email) when performing the commands below.
+See here for account details: <https://scilifelabdatacentre.github.io/dds_cli/#get-an-account>.
 
 List project content
 
@@ -12,7 +16,7 @@ List project content
 
 Download all data
 
-    $ dds data get --get-all --project snpseq00477
+    $ dds data get --get-all --verify-checksum --project snpseq00477
 
 Download specific files
 
