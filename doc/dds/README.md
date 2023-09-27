@@ -1,0 +1,89 @@
+# Data Download from NGI using DDS
+
+- Last modified: ons sep 27, 2023  05:01
+- Sign: nylander
+
+## Data download from NGI to NRM-backup using DDS
+
+### Steps
+
+- Login to `nrmdna01.nrm.se` using your NRM credentials
+- Change to relevant directory (create one if necessary). Note: the current
+  folder structure on the server is
+  `/projects/<dept>-projects/<PI-NRM-username>`. The PI may, or may not already
+  have an account on the server, and may, or may not know how to create folders
+  etc.
+- Make sure the `dds-cli` is available (otherwise install in your `$HOME/bin/`.
+  Note: easiest is probably to download the latest binary release for Ubuntu
+  20.04 (see link on <https://github.com/ScilifelabDataCentre/dds_cli/releases>
+  saying "`dds_cli_ubuntu-20.04_x86_64`", then rename it to `$HOME/bin/dds`,
+  and finally `chmod +x $HOME/bin/dds`)
+- Start a screen session (`screen -S name`)
+- Run the client to download data. Detach from the screen session if needed
+  (`Ctrl+A`, `Ctrl+D`)
+- Revisit the server later, reconnect to the screen session (`screen -R name`)
+- Check md5 sums (<https://github.com/nylander/Check_MD5SUMS>. You most
+  probably want to download the script `check_md5sums.sh`, put it in your
+  `$HOME/bin`, and make it executable.)
+- Exit the screen session  (`exit`)
+- If you have created a folder for a PI, then the user- and group permissions are set to you.
+Make sure others have read permissions to all files and folders. For example:
+
+        $ chmod -R o+r /projects/BIO-projects/piname
+        $ find /projects/BIO-projects/piname -type d -exec chmod o+rx {} \;
+
+
+### Using the dds client
+
+**Note** You need to supply your registered user, password, and one-time-code
+(code send by email) when performing the commands below.  See here for account
+details: <https://scilifelabdatacentre.github.io/dds_cli/#get-an-account>.
+
+List project content
+
+    $ dds data ls --tree --project snpseq00477
+    $ dds data ls --size --project snpseq00477
+
+Download all data
+
+    $ dds data get --get-all --verify-checksum --project snpseq00477
+
+Download specific files
+
+    $ dds data get \
+      --source WD-3659/230830_A00181_0675_AHL5YKDRX3/230830_A00181_0675_AHL5YKDRX3_WD-3659_multiqc_report.html \
+      --source WD-3659/230830_A00181_0675_AHL5YKDRX3/230830_A00181_0675_AHL5YKDRX3_WD-3659_multiqc_report_data.zip \
+      --source WD-3659/230830_A00181_0675_AHL5YKDRX3/SampleSheet.csv \
+      --project snpseq00477
+
+### Links
+
+- <https://scilifelabdatacentre.github.io/dds_cli/examples/>
+- <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
+- <https://scilifelabdatacentre.github.io/dds_cli/>
+
+## Data download from NGI to rackham
+
+- <https://scilifelabdatacentre.github.io/dds_cli/>
+
+### Steps
+
+- If the PI have a storage and/or compute account on rackham, make sure to be
+  added to the project (apply on <https://supr.naiss.se>). Otherwise, make sure
+  you have access to `/proj/nrmdnalab_storage`.
+- Check before you start that there are still storage space left (check with
+  `uquota`).
+- Create a new project folder (e.g., under
+  `/proj/nrmdnalab_storage/nobackup/`). One way of doing that can be seen in
+  this example (**Need `ptemplate`**
+  <https://gist.github.com/nylander/beff8f66d3b5c30c6c3ec732688e5373>:
+  `ptemplate myproject`
+- Change directory to where the data should be downloaded (e.g. `raw_data`)
+- Load the `dds` program using the rackham module system: `module load
+  bioinfo-tools dds-cli`
+- Start the client: `dds`
+
+### Links
+
+- <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
+
