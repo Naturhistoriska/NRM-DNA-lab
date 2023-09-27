@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard workflows
 
-- Last modified: ons sep 27, 2023  04:58
+- Last modified: ons sep 27, 2023  05:56
 - Sign: JN
 
 ---
@@ -9,14 +9,12 @@
 
 ---
 
-### Personal checklist
+## Personal checklist
 
 To be able to work smoothly with the workflows, there are a number of accounts
 and settings that needs to be in place for each person.  Please go through the
 personal checklist ([`doc/checklist/README.md`](doc/checklist/README.md)) and
 send feedback on the progress to the other lab members.
-
----
 
 ## Securing Meta Data from User
 
