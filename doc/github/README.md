@@ -1,6 +1,6 @@
 # Github
 
-- Last modified: ons sep 27, 2023  05:10
+- Last modified: fre sep 29, 2023  01:24
 - Sign: nylander
 
 ## Description
@@ -11,6 +11,8 @@ GitHub, then fill out
 [Bestallningsblankett-2017-V2.pdf](Bestallningsblankett-2017-V2.pdf)
 (don't forget your GitHub user name) and send to Dept. head. Tell JN when
 approved.
+
+Also make sure to be added to the github team `NRM-DNA-lab` within the Naturhistoriska github organization (ask JN).
 
 You may then create public or private repositories under github.com/Naturhistoriska.
 
