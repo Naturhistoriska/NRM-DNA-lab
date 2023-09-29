@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard workflows
 
-- Last modified: fre sep 29, 2023  01:19
+- Last modified: fre sep 29, 2023  01:28
 - Sign: JN
 
 ---
@@ -76,7 +76,7 @@ provider.  Sometimes, however, it may be relevant to do this on your own.
 
 See descriptions in [doc/qc/README.md](doc/qc/README.md).
 
-## Data cleaning, Merging, etc
+## Data Cleaning, Merging, etc
 
 Note: this step may or may not be necessary depending on the choice of
 downstream analyses.
@@ -87,7 +87,7 @@ See description in [doc/cleaning/README.md](doc/cleaning/README.md).
 
 See [doc/analyses/README.md](doc/analyses/README.md) for description.
 
-## Data submission to public databases
+## Data Submission to Public Databases
 
 Sequence data can be submitted to public databases such as
 [Genbank](https://www.ncbi.nlm.nih.gov/genbank/submit/) or
