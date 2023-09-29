@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard workflows
 
-- Last modified: ons sep 27, 2023  05:56
+- Last modified: fre sep 29, 2023  01:19
 - Sign: JN
 
 ---
@@ -15,6 +15,24 @@ To be able to work smoothly with the workflows, there are a number of accounts
 and settings that needs to be in place for each person.  Please go through the
 personal checklist ([`doc/checklist/README.md`](doc/checklist/README.md)) and
 send feedback on the progress to the other lab members.
+
+## Create a Project Repository on GitHub
+
+To ensure reproducibility, it is important to document all steps of the data management and analysis.
+A recommended procedure is to create a repository where all text is under version control.
+
+NRM have an organization on GitHub: [github.com/Naturhistoriska](https://github.com/Naturhistoriska),
+and that is an appropriate location to keep repositories.
+
+Procedure:
+
+1. Create a private repository on github for the project. Name it short but
+   kind-of human readable, e.g., `johan-n-snakes`.
+2. Add the GitHub Team `NRM-DNA-lab` as collaborators on the repository. If
+   practical, add also the PI (this requires that the PI has a github account,
+   and that her or she is added to the Naturhistoriska github organization).
+
+For more details on git and GitHub, see [`doc/github/README.md`](doc/github/README.md).
 
 ## Securing Meta Data from User
 
