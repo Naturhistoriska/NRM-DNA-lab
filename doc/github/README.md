@@ -1,6 +1,6 @@
 # Github
 
-- Last modified: fre sep 29, 2023  01:24
+- Last modified: fre sep 29, 2023  01:40
 - Sign: nylander
 
 ## Description
@@ -12,9 +12,21 @@ GitHub, then fill out
 (don't forget your GitHub user name) and send to Dept. head. Tell JN when
 approved.
 
-Also make sure to be added to the github team `NRM-DNA-lab` within the Naturhistoriska github organization (ask JN).
+Also make sure to be added to the github team `NRM-DNA-lab` within the
+Naturhistoriska github organization (ask JN).
 
 You may then create public or private repositories under github.com/Naturhistoriska.
+
+## Configure git for first-time usage
+
+Before using command-line git for interacting with code ("push and pull"), you
+need to configure your identity.  This applies on all computers you wish to use
+for git control.
+
+    $ git config --global user.name "John Doe"
+    $ git config --global user.email johndoe@example.com
+
+More more details, see <https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup>.
 
 ## Setup SSH-connection with GitHub
 
