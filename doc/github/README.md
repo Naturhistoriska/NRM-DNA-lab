@@ -1,6 +1,6 @@
-# Github
+# git and GitHub
 
-- Last modified: fre sep 29, 2023  01:40
+- Last modified: fre sep 29, 2023  01:48
 - Sign: nylander
 
 ## Description
@@ -134,3 +134,10 @@ git-world this is called to "create a pull request", and to "review a pull
 request". Such a procedure is important on larger projects where a single
 change can potentially break a working product.  Read more about it
 [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+
+## More reading
+
+- <https://git-scm.com/docs/gittutorial>
+- <https://training.github.com/downloads/github-git-cheat-sheet/>
+- <https://git-scm.com/doc>
+
