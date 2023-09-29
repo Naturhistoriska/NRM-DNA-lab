@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard Workflows
 
-- Last modified: fre sep 29, 2023  01:29
+- Last modified: fre sep 29, 2023  01:32
 - Sign: JN
 
 ---
@@ -30,7 +30,7 @@ Procedure:
    kind-of human readable, e.g., `johan-n-snakes`.
 2. Add the GitHub Team `NRM-DNA-lab` as collaborators on the repository. If
    practical, add also the PI (this requires that the PI has a github account,
-   and that her or she is added to the Naturhistoriska github organization).
+   and that he or she is added to the Naturhistoriska github organization).
 
 For more details on git and GitHub, see [`doc/github/README.md`](doc/github/README.md).
 
