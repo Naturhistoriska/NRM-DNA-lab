@@ -1,6 +1,6 @@
-# NRM DNA lab - Standard workflows
+# NRM DNA lab - Standard Workflows
 
-- Last modified: fre sep 29, 2023  01:28
+- Last modified: fre sep 29, 2023  01:29
 - Sign: JN
 
 ---
@@ -9,7 +9,7 @@
 
 ---
 
-## Personal checklist
+## Personal Checklist
 
 To be able to work smoothly with the workflows, there are a number of accounts
 and settings that needs to be in place for each person.  Please go through the
