@@ -1,13 +1,49 @@
 # Data Download from NGI using DDS
 
-- Last modified: ons sep 27, 2023  05:01
+- Last modified: ons okt 11, 2023  09:15
 - Sign: nylander
+
+
+## Background
+
+(Text taken from <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>)
+
+> When a project is ready for delivery, NGI registers a new delivery project with
+> DDS.  DDS (Data Delivery System) is a command-line tool developed by the Data
+> Centre at SciLifeLab together with NGI. It consists of a command-line-interface
+> (CLI) and a web interface. Data uploaded to DDS is securely encrypted at all
+> times and can only be decrypted by members of the specific project.
+
+> Initially, the PI of the sequencing or genotyping project will be assigned as
+> the PI of the delivery project in DDS. The bioinformatics responsible person
+> specified on the order will be added as a member of the delivery project. When
+> the delivery project has been created, the PI and any member of the project
+> will receive an e-mail from SciLifeLab saying that the project is now available
+> for access.  The PI can administer the delivery project and, can therefore, add
+> or remove member(s) and set members as project owners through the DDS CLI .
+> Members of the delivery project are able to download the data or have the data
+> copied to Bianca (for more information about how DDS works for Bianca, please
+> see this link.) After delivery with DDS, the PI is solely responsible for
+> ensuring the integrity, availability and safekeeping of the sequencing or
+> genotyping data and associated files, as well as ensuring that the data is
+> handled in accordance with applicable legislation.
+
+**Important:** "Delivery projects are only active for 45 days after data
+delivery and will expire thereafter. The PI of the delivery project is
+responsible for ensuring that data is retrieved before the delivery expires.
+Once the delivery has expired, it is automatically removed from DDS."
+
+**Note:** In order to use dds for downloading you require a user account.  The
+procedure to get one is for the PI to list you as a member or bioinformatician
+when *data is ordered* (**TODO:** add details).
+
 
 ## Data download from NGI to NRM-backup using DDS
 
 ### Steps
 
-- Login to `nrmdna01.nrm.se` using your NRM credentials
+- Login to `nrmdna01.nrm.se` using your NRM credentials (user name, password,
+  and one-time authentication code sent to your email address)
 - Change to relevant directory (create one if necessary). Note: the current
   folder structure on the server is
   `/projects/<dept>-projects/<PI-NRM-username>`. The PI may, or may not already
@@ -26,8 +62,9 @@
   probably want to download the script `check_md5sums.sh`, put it in your
   `$HOME/bin`, and make it executable.)
 - Exit the screen session  (`exit`)
-- If you have created a folder for a PI, then the user- and group permissions are set to you.
-Make sure others have read permissions to all files and folders. For example:
+- If you have created a folder for a PI, then the user- and group permissions
+  are set to you.  Make sure others have read permissions to all files and
+  folders. For example:
 
         $ chmod -R o+r /projects/BIO-projects/piname
         $ find /projects/BIO-projects/piname -type d -exec chmod o+rx {} \;
