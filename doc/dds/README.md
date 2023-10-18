@@ -55,8 +55,8 @@ when *data is ordered* (**TODO:** add details).
   saying "`dds_cli_ubuntu-20.04_x86_64`", then rename it to `$HOME/bin/dds`,
   and finally `chmod +x $HOME/bin/dds`)
 - Start a screen session (`screen -S name`)
-- Run the client to download data. Detach from the screen session if needed
-  (`Ctrl+A`, `Ctrl+D`)
+- Run the client to download data (see [usage](#using-the-dds-client) below).
+  Detach from the screen session if needed (`Ctrl+A`, `Ctrl+D`).
 - Revisit the server later, reconnect to the screen session (`screen -R name`)
 - Check md5 sums (<https://github.com/nylander/Check_MD5SUMS>. You most
   probably want to download the script `check_md5sums.sh`, put it in your
@@ -64,11 +64,12 @@ when *data is ordered* (**TODO:** add details).
 - Exit the screen session  (`exit`)
 - If you have created a folder for a PI, then the user- and group permissions
   are set to you.  Make sure others have read permissions to all files and
-  folders. For example:
+  folders. In addition, it is probably a good idea to also remove write
+  permission for files (to avoid deletion). For example:
 
         $ chmod -R o+r /projects/BIO-projects/piname
         $ find /projects/BIO-projects/piname -type d -exec chmod o+rx {} \;
-
+        $ chmod -R -w /projects/BIO-projects/piname
 
 ### Using the dds client
 
