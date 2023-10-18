@@ -106,20 +106,20 @@ Download specific files
 
 ### Steps
 
-- If the PI have a storage and/or compute account on rackham, make sure to be
-  added to the project (apply on <https://supr.naiss.se>). Otherwise, make sure
-  you have access to `/proj/nrmdnalab_storage`.
-- Check before you start that there are still storage space left (check with
+1. If the PI have a storage and/or compute account on rackham, make sure to be
+   added to the project (apply on <https://supr.naiss.se>). Otherwise, make sure
+   you have access to `/proj/nrmdnalab_storage`.
+2. Check before you start that there are still storage space left (check with
   `uquota`).
-- Create a new project folder (e.g., under
-  `/proj/nrmdnalab_storage/nobackup/`). One way of doing that can be seen in
-  this example (**Need `ptemplate`**
-  <https://gist.github.com/nylander/beff8f66d3b5c30c6c3ec732688e5373>:
-  `ptemplate myproject`
-- Change directory to where the data should be downloaded (e.g. `raw_data`)
-- Load the `dds` program using the rackham module system: `module load
-  bioinfo-tools dds-cli`
-- Start the client: `dds`
+3. Create a new project folder (e.g., under
+   `/proj/nrmdnalab_storage/nobackup/`). One way of doing that can be seen in
+   this example (using `ptemplate`
+   <https://gist.github.com/nylander/beff8f66d3b5c30c6c3ec732688e5373>):
+   `ptemplate myproject`
+4. Change directory to where the data should be downloaded (e.g. `raw_data`)
+5. Load the `dds` program using the rackham module system: `module load
+   bioinfo-tools dds-cli`
+6. Start the client: `dds`
 
 ### Links
 
