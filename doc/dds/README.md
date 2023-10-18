@@ -63,7 +63,7 @@ when *data is ordered* (**TODO:** add details).
   `$HOME/bin`, and make it executable.)
 8. Exit the screen session  (`exit`)
 9. If you have created a folder for a PI, then the user- and group permissions
-  are set to you.  Make sure others have read permissions to all files and
+  are set to your user. Make sure others have read permissions to all files and
   folders. In addition, it is probably a good idea to also remove write
   permission for files (to avoid deletion). For example:
 
