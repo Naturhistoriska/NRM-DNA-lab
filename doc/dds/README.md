@@ -42,27 +42,27 @@ when *data is ordered* (**TODO:** add details).
 
 ### Steps
 
-- Login to `nrmdna01.nrm.se` using your NRM credentials (user name, password,
+1. Login to `nrmdna01.nrm.se` using your NRM credentials (user name, password,
   and one-time authentication code sent to your email address)
-- Change to relevant directory (create one if necessary). Note: the current
+2. Change to relevant directory (create one if necessary). Note: the current
   folder structure on the server is
   `/projects/<dept>-projects/<PI-NRM-username>`. The PI may, or may not already
   have an account on the server, and may, or may not know how to create folders
   etc.
-- Make sure the `dds-cli` is available (otherwise install in your `$HOME/bin/`.
+3. Make sure the `dds-cli` is available (otherwise install in your `$HOME/bin/`.
   Note: easiest is probably to download the latest binary release for Ubuntu
   20.04 (see link on <https://github.com/ScilifelabDataCentre/dds_cli/releases>
   saying "`dds_cli_ubuntu-20.04_x86_64`", then rename it to `$HOME/bin/dds`,
   and finally `chmod +x $HOME/bin/dds`)
-- Start a screen session (`screen -S name`)
-- Run the client to download data (see [usage](#using-the-dds-client) below).
+4. Start a screen session (`screen -S name`)
+5. Run the client to download data (see [usage](#using-the-dds-client) below).
   Detach from the screen session if needed (`Ctrl+A`, `Ctrl+D`).
-- Revisit the server later, reconnect to the screen session (`screen -R name`)
-- Check md5 sums (<https://github.com/nylander/Check_MD5SUMS>. You most
+6. Revisit the server later, reconnect to the screen session (`screen -R name`)
+7. Check md5 sums (<https://github.com/nylander/Check_MD5SUMS>. You most
   probably want to download the script `check_md5sums.sh`, put it in your
   `$HOME/bin`, and make it executable.)
-- Exit the screen session  (`exit`)
-- If you have created a folder for a PI, then the user- and group permissions
+8. Exit the screen session  (`exit`)
+9. If you have created a folder for a PI, then the user- and group permissions
   are set to you.  Make sure others have read permissions to all files and
   folders. In addition, it is probably a good idea to also remove write
   permission for files (to avoid deletion). For example:
