@@ -60,7 +60,7 @@ Note: `parallel` is currently, 12 jul 2023, not installed globally on nrmdna01.n
         $ cat *.md5 > MD5SUMS
 
 4. Add the correct filenames and md5sums to the tsv file (using, e.g., the
-   script [`include_md5sums.pl`](../../src/include_md5sums.pl)
+   script [`include_md5sums.pl`](https://github.com/Naturhistoriska/NRM-DNA-lab/blob/main/src/include_md5sums.pl))
 
         $ ./include_md5sums.pl "$myfile" MD5SUMS > PRJEB64275.tsv
 
