@@ -1,7 +1,7 @@
 # Data Download from NGI using DDS
 
-- Last modified: ons okt 11, 2023  09:15
-- Sign: nylander
+- Last modified: tis nov 21, 2023
+- Sign: bodicron
 
 
 ## Background
@@ -93,6 +93,10 @@ Download specific files
       --source WD-3659/230830_A00181_0675_AHL5YKDRX3/230830_A00181_0675_AHL5YKDRX3_WD-3659_multiqc_report_data.zip \
       --source WD-3659/230830_A00181_0675_AHL5YKDRX3/SampleSheet.csv \
       --project snpseq00477
+
+Invite other users to a project
+
+    $ dds user add "someone@somewhere.se" -p "ngisthlm00468" -r "Researcher"
 
 ### Links
 
