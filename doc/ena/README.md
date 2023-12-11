@@ -11,11 +11,19 @@
 
 ## 1. Register study
 
-<https://ena-docs.readthedocs.io/en/latest/submit/study.html>
+- <https://ena-docs.readthedocs.io/en/latest/submit/study.html>
 
-*Once a study is registered, Webin will report two accession numbers for the study. The first starts with PRJEB and is called the BioProject accession. This is typically used in journal publications. The study will also be assigned an alternative accession number that starts with ERP. This accession number is called the study accession.*
+Visit the interactive portal for study registration: <https://ena-docs.readthedocs.io/en/latest/submit/study/interactive.html>.
 
-*The study and its associated data will not become public until the study release date has expired. The default for a newly registered study is to have a hold date two months after the submission date.*
+Fill out
+ - [ ] Release date (se notes below)
+ - [ ] Short descriptive study title
+ - [ ] Study name
+ - [ ] Detailed study abstract.
+
+Note on Release date: *The study and its associated data will not become public until the study release date has expired. The default for a newly registered study is to have a hold date two months after the submission date. The release date can be as much as 2 years beyond the present date, and on this day the study and its data will automatically be made public. Notification of this will be sent in advance to all email addresses registered with your submission account. You can change the release date at any time to make it sooner or later, but once the data becomes public you may not make it private again.* See also: <https://ena-docs.readthedocs.io/en/latest/faq/release.html>
+
+Note on Accessions: *Once a study is registered, Webin will report two accession numbers for the study. The first starts with PRJEB and is called the BioProject accession. This is typically used in journal publications. The study will also be assigned an alternative accession number that starts with ERP. This accession number is called the study accession.*
 
 ## 2. Register samples
 
