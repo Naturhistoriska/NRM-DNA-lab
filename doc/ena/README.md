@@ -11,7 +11,7 @@
 
 ## 1. Register study
 
-- <https://ena-docs.readthedocs.io/en/latest/submit/study.html>
+<https://ena-docs.readthedocs.io/en/latest/submit/study.html>
 
 Login to the [Webin portal](https://www.ebi.ac.uk/ena/submit/webin]. Under "Studies (Projects)", click on "Register study".
 
