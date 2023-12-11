@@ -13,6 +13,10 @@
 
 <https://ena-docs.readthedocs.io/en/latest/submit/study.html>
 
+*Once a study is registered, Webin will report two accession numbers for the study. The first starts with PRJEB and is called the BioProject accession. This is typically used in journal publications. The study will also be assigned an alternative accession number that starts with ERP. This accession number is called the study accession.*
+
+*The study and its associated data will not become public until the study release date has expired. The default for a newly registered study is to have a hold date two months after the submission date.*
+
 ## 2. Register samples
 
 <https://ena-docs.readthedocs.io/en/latest/submit/samples.html>,
