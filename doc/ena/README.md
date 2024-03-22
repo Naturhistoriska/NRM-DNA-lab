@@ -37,7 +37,7 @@ Note on Accessions: *Once a study is registered, Webin will report two accession
 
 ## 2. Register samples
 
-- [ ] Get sample sheet from PI! See [metadata](../metadata/README.md) or here: <https://github.com/Naturhistoriska/NRM-DNA-lab/blob/main/doc/metadata/README.md>.
+- [ ] Get sample sheet from PI! See [metadata](../metadata/README.md).
 
 Then see
 <https://ena-docs.readthedocs.io/en/latest/submit/samples.html>,
