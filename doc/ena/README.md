@@ -5,6 +5,14 @@
 
 ## Description
 
+In addition to the fastq files that needs to be submitted, we need metadata information (for the fastq files), but also information on the study from the PI. The necessary pices of information is listed below. For details on the checklist, see below.
+- [ ] Sample sheet from PI (see [metadata](../metadata/README.md))
+- [ ] Location of fastq files (most probably on nrmdna01.nrm.se)
+- [ ] Release date (se notes below)
+- [ ] Short descriptive study title (from PI)
+- [ ] Study name (from PI)
+- [ ] Detailed study abstract (from PI)
+
 ## 0. ENA Webin portal
 
 <https://www.ebi.ac.uk/ena/submit/webin/login>
@@ -29,6 +37,9 @@ Note on Accessions: *Once a study is registered, Webin will report two accession
 
 ## 2. Register samples
 
+- [ ] Get sample sheet from PI! See [metadata](../metadata/README.md) or here: <https://github.com/Naturhistoriska/NRM-DNA-lab/blob/main/doc/metadata/README.md>.
+
+Then see
 <https://ena-docs.readthedocs.io/en/latest/submit/samples.html>,
 <https://ena-docs.readthedocs.io/en/latest/submit/samples/interactive.html>
 
