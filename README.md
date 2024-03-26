@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard Workflows
 
-- Last modified: fre sep 29, 2023  01:32
+- Last modified: tis mar 26, 2024  03:23
 - Sign: JN
 
 ---
@@ -24,15 +24,13 @@ A recommended procedure is to create a repository where all text is under versio
 NRM have an organization on GitHub: [github.com/Naturhistoriska](https://github.com/Naturhistoriska),
 and that is an appropriate location to keep repositories.
 
-Procedure:
+Procedure (see [`doc/github/README.md`](doc/github/README.md) for details):
 
 1. Create a private repository on github for the project. Name it short but
    kind-of human readable, e.g., `johan-n-snakes`.
 2. Add the GitHub Team `NRM-DNA-lab` as collaborators on the repository. If
    practical, add also the PI (this requires that the PI has a github account,
    and that he or she is added to the Naturhistoriska github organization).
-
-For more details on git and GitHub, see [`doc/github/README.md`](doc/github/README.md).
 
 ## Securing Meta Data from User
 
