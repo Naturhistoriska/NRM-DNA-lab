@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: tis mar 26, 2024  03:13
+- Last modified: tis mar 26, 2024  04:15
 - Sign: nylander
 
 ## Description
@@ -82,9 +82,9 @@ later push the files in this repository to our empty github repository created
 above.
 
 1. Create a project file hierarchy by cloning a [project
-   template](https://github.com/nylander/ptemplate).
+   template](https://github.com/nylander/NRM-ptemplate).
 
-        $ git clone https://github.com/nylander/ptemplate.git johan-n-snake-project
+        $ git clone https://github.com/Naturhistoriska/NRM-ptemplate.git johan-n-snake-project
         $ cd johan-n-snake-project
         $ sh bin/init.sh
         $ rm old/init.sh
@@ -94,24 +94,22 @@ above.
         $ git branch -M main
 
 2. Edit the `README.md` file and add the relevant description of the project.
-3. Create a `Notebook.md` file where we will keep running notes on analyses.  A
-   link to the Notebook can be added in the README by using the syntax `[link
+3. Use the `Notebook.md` file for running notes on analyses. A
+   link to the Notebook can be added in the README.md by using the syntax `[link
    to Notebook.md](Notebook.md)`.
-5. Add any other relevant files
-6. Add all relevant files.  **Warning:** Make sure no files with sensitive or
-   private content are added!  I usually solve this by adding the line
-   `private/*` to the file `.gitignore`, then creating a `private/` folder
-   where I keep all private files.  Safest is to add files one by one, but
-   below we add all at once.
+4. Add any other relevant files for the project.
+   **Warning:** Make sure no files with sensitive or private content are added!
+   Project information not intended for github can be placed in the folder `private/`, which is not under git control.
+   Safest is to add files one by one using `git add filename`, but below we add all at once:
 
         $ git status
         $ git add --all
 
-7. Commit to our changes
+5. Commit to our changes
 
         $ git commit -m "first commit"
 
-8. Push our committed changes to our main branch over at GitHub
+6. Push our committed changes to our main branch over at GitHub
 
         $ git push -u origin main
 
