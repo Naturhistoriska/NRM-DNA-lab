@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: fre sep 29, 2023  01:48
+- Last modified: tis mar 26, 2024  03:13
 - Sign: nylander
 
 ## Description
@@ -16,6 +16,8 @@ Also make sure to be added to the github team `NRM-DNA-lab` within the
 Naturhistoriska github organization (ask JN).
 
 You may then create public or private repositories under github.com/Naturhistoriska.
+
+# Setup
 
 ## Configure git for first-time usage
 
@@ -49,44 +51,95 @@ where you have the private key part):
     $ ssh -T git@github.com
     Hi johan! You've successfully authenticated, but GitHub does not provide shell access.
 
-## Steps to create a new git repository
+---
 
-Easiest is to visit <https://github.com/Naturhistoriska>, and click on green
-button "New".  Make sure the Owner is Naturhistoriska, and supply a meaningful
-repository name. For example: `johan-n-snake-project`. Add a more detailed
-Description (still short). Choose Public or Private.  Private is probably
-appropriate for an ongoing research project. The down-side is that there might
-be limits on if and how the repository can be shared with a collaborator/PI.
-Then click on green button "Create repository".
+# Create or clone a new repository
 
-After creating the empty repository on GitHub, do (either):
+## 1. Create a project repository on GitHub.com/Naturhistoriska
 
-### Create a new repository on the command line
+Here we will create a new, private, and empty repository for a project on github.
 
-    $ echo "# johan-n-snake-project" >> README.md
-    $ git init
-    $ git add README.md
-    $ git commit -m "first commit"
-    $ git branch -M main
-    $ git remote add origin git@github.com:Naturhistoriska/johan-n-snake-project.git
-    $ git push -u origin main
+1. Open a web browser
+2. Create a new project
+(<https://github.com/organizations/Naturhistoriska/repositories/new>)
+    - Add a name, preferably with PI name and project name. E.g.
+      `johan-n-snake-project`
+    - Add a short description
+    - Make sure the **Private** checkbox is ticked
+    - Click on **Create repository**
+3. Add the DNA-lab Team to the repository:
+    - On the top panel, click on **Settings**
+    - Left panel, click **Access Collaborators and teams**
+    - Under Manage access: click on **Add teams**
+    - Search for `Naturhistoriska/nrm-dna-lab` and continue
+    - Choose a role: **Maintain** (or consider *Write* or *Admin*)
+    - Click on **Add Naturhistoriska/nrm-dna-lab to this repository**
 
-### or push an existing repository from the command line
+## 2. Create a (new) project locally
 
-    $ git remote add origin git@github.com:Naturhistoriska/johan-n-snake-project.git
-    $ git branch -M main
-    $ git push -u origin main
+Here we will create a new project repository on our local computer.  We will
+later push the files in this repository to our empty github repository created
+above.
 
-## Git workflow
+1. Create a project file hierarchy by cloning a [project
+   template](https://github.com/nylander/ptemplate).
 
-### Minimal version
+        $ git clone https://github.com/nylander/ptemplate.git johan-n-snake-project
+        $ cd johan-n-snake-project
+        $ sh bin/init.sh
+        $ rm old/init.sh
 
-Start every session by checking if you are up to date
+2. Add the newly created GitHub-repository as "remote"
+        $ git remote add origin git@github.com:Naturhistoriska/johan-n-snake-project.git
+        $ git branch -M main
 
+2. Edit the `README.md` file and add the relevant description of the project.
+3. Create a `Notebook.md` file where we will keep running notes on analyses.  A
+   link to the Notebook can be added in the README by using the syntax `[link
+   to Notebook.md](Notebook.md)`.
+5. Add any other relevant files
+6. Add all relevant files.  **Warning:** Make sure no files with sensitive or
+   private content are added!  I usually solve this by adding the line
+   `private/*` to the file `.gitignore`, then creating a `private/` folder
+   where I keep all private files.  Safest is to add files one by one, but
+   below we add all at once.
+
+        $ git status
+        $ git add --all
+
+7. Commit to our changes
+
+        $ git commit -m "first commit"
+
+8. Push our committed changes to our main branch over at GitHub
+
+        $ git push -u origin main
+
+## Cloning a project
+
+For cloning a project that you are supposed to work with, and contribute to,
+needs to be clones using accreditation with github (we are often cloning
+private repositories).  This assumes a user setup with ssh-keys for
+authentication. See this
+[link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+for help.
+
+    $ git clone git@github.com:Naturhistoriska/johan-n-snake-project.git
+
+---
+
+# Git workflow - ways of working
+
+## Minimal version
+
+Start every session by checking if you are up to date, and on the correct
+branch!
+
+    $ git branch
     $ git status
     $ git fetch
     $ git status
-    $ git pull # if needed
+    $ git pull   # if needed
 
 Do some work, for example, editing the README.md file.
 
@@ -96,7 +149,7 @@ Then:
     $ git commit -m "Important changes in repo description"
     $ git push
 
-### More robust version
+## More robust version
 
 (Given that we are up-to-date on branch `main`), create a "working" branch
 
@@ -115,7 +168,7 @@ which may or may not cause trouble if you cannot merge)
     $ git checkout -b temp
     $ git merge feature/mywork
 
-If we managed to merge withut troubles (hopefully "Fast-forward"), then we can
+If we managed to merge without troubles (hopefully "Fast-forward"), then we can
 go back to the main branch and merge with feature/mywork. End by deleting test
 and feature/mywork.
 
