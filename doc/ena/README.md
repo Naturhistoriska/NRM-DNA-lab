@@ -1,6 +1,6 @@
 # ENA Data Submission
 
-- Last modified: mån apr 22, 2024  04:41
+- Last modified: tor apr 25, 2024  05:46
 - Sign: nylander
 
 ## Description
@@ -134,9 +134,6 @@ Note: `parallel` is currently, 12 jul 2023, not installed globally on nrmdna01.n
         $ lftp -e "set ftp:ssl-allow off;" -u Webin-65361,"$mypassword" webin2.ebi.ac.uk
         lftp> mirror -v -p -c -R -P 10 -L --dry-run -f *.fastq.gz
         lftp> mirror -v -p -c -R -P 10 -L -f *.fastq.gz
-
-**Note** IT just recently allowed access with lftp to ENA. The full command is
-untested (ons 27 sep 2023 14:39:03).
 
 7. Upload and validate tsv file
 
