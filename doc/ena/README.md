@@ -1,6 +1,6 @@
 # ENA Data Submission
 
-- Last modified: tor apr 25, 2024  05:46
+- Last modified: mån apr 29, 2024  05:06
 - Sign: nylander
 
 ## Description
@@ -67,8 +67,7 @@ Then see
 <https://ena-docs.readthedocs.io/en/latest/submit/reads.html>,
 <https://networklessons.com/uncategorized/lftp-stuck-making-data-connection>
 
-1. Get an ENA-formatted file with file names and descriptions from user (e.g.,
-   [`fastq2_template_1699967766479.tsv`](fastq2_template_1699967766479.tsv)).
+1. Get an ENA-formatted file with file names and descriptions from user.
    Template file can be downloaded here:
    <https://www.ebi.ac.uk/ena/submit/webin/read-submission> (then choose
    **Download spreadsheet template for Read submission**, **Please select file
@@ -76,8 +75,8 @@ Then see
    fields** (`sample`, `study`, `instrument_model`, `library_name`,
    `library_source`, `library_selection`, `library_strategy`, `library_layout`,
    `forward_file_name`, `forward_file_md5`, `reverse_file_name`,
-   `reverse_file_md5`),
-
+   `reverse_file_md5`), or seen in this example
+   [`fastq2_template_xxxx.tsv`](fastq2_template_xxxx.tsv).
 
 2. Fill out the columns in the template.
 
@@ -121,10 +120,9 @@ Note: `parallel` is currently, 12 jul 2023, not installed globally on nrmdna01.n
         $ sed -i 's#./##' *.md5
         $ cat *.md5 > MD5SUMS
 
-5. Add the correct filenames and md5sums to the tsv file (using, e.g., the
-   script [`include_md5sums.pl`](https://github.com/Naturhistoriska/NRM-DNA-lab/blob/main/src/include_md5sums.pl))
+5. Create the fastq-submit file
 
-        $ ./include_md5sums.pl "$myfile" MD5SUMS > PRJEB64275.tsv
+TEXT HERE
 
 6. Submit to ENA server using lftp mirror
 
@@ -146,6 +144,7 @@ Select `PRJEB64275.tsv`.
 
 - ENA <https://www.ebi.ac.uk/ena/browser/submit>
 - ENA Webin-CLI <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html>
+- ENA taxon API <https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/taxon-api.html>
 - Genbank <https://www.ncbi.nlm.nih.gov/genbank/submit_types/>
 - INSDC <https://www.insdc.org/>
 
