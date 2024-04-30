@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: tis apr 30, 2024  10:13
+- Last modified: tis apr 30, 2024  10:15
 - Sign: nylander
 
 ## Description
@@ -99,7 +99,7 @@ above.
    link to the Notebook can be added in the README.md by using the syntax `[link
    to Notebook.md](Notebook.md)`.
 4. Add any other relevant files for the project.
-   **Warning:** Make sure no files with sensitive or private content are added!
+   **Warning: Make sure no files with sensitive or private content are added!**
    Project information not intended for github can be placed in the folder `private/`, which is not under git control.
    Safest is to add files one by one using `git add filename`, but below we add all at once:
 
@@ -127,7 +127,7 @@ for help.
 
 ---
 
-# Git workflow - ways of working
+# Git workflow - Ways of working
 
 ## Minimal version
 
@@ -150,7 +150,7 @@ Then:
 
 ## More robust version
 
-(Given that we are up-to-date on branch `main`), create a "working" branch
+(Given that we are up-to-date on branch `main`), start by creating a "working" branch
 
     $ git checkout -b feature/mywork
 
