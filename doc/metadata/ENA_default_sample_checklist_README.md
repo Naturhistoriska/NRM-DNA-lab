@@ -1,6 +1,6 @@
 # Fields in the ENA (extended) data sheet
 
-- Last modified: ons sep 27, 2023  12:42
+- Last modified: tis apr 30, 2024  01:07
 - Sign: JN
 
 Reference: <https://www.ebi.ac.uk/ena/submit/webin/app-checklist/sample/true>
@@ -18,16 +18,28 @@ Taxonomy ID of the organism as in the NCBI Taxonomy database
 database have integer taxon IDs. See our tips for sample taxonomy here:
 <https://ena-docs.readthedocs.io/en/latest/faq/taxonomy.html>.
 
+If no taxon ID is available (e.g., new or unknown species), this have to be
+addressed separately before submission. See `scientific_name` below.
+
 ### `scientific_name`
 
 Scientific name of the organism as in the [NCBI Taxonomy
 database](https://www.ncbi.nlm.nih.gov/Taxonomy). Scientific names typically
 follow the binomial nomenclature. For example, the scientific name for humans
-is *Homo sapiens*.
+is *Homo sapiens*. Note: use the binomen (no authors).
+
+If no bionomen is available, e.g. when there is no taxon ID in ENA database, or
+if the species is unknown, this has to be addressed before submission. This
+can be done by applying for a new taxonomy (see
+<https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#requesting-new-taxon-ids>).
+If the taxon is from an unknown -- or yet to be described species -- use a
+place holder as taxon name.  For example: *Genus sp. 1 US-2024*. See
+instructions here:
+<https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#eukaryotes>.
 
 ### `sample_alias`
 
-Unique name of the sample. **Note:** this entry will be used as `LIBRARY_ID` in
+**Unique** name of the sample. Note: this entry will be used as `LIBRARY_ID` in
 the sample sheet for submitting samples for sequencing at NGI (see
 <https://github.com/Naturhistoriska/NRM-DNA-lab/#2-ordering-sequences-from-scilifelabngi>).
 
@@ -45,7 +57,8 @@ The date the sample was collected with the intention of sequencing, either as
 an instance (single point in time) or interval. In case no exact time is
 available, the date/time can be right truncated i.e. all of these are valid
 ISO8601 compliant times: `2008-01-23T19:23:10+00:00`; `2008-01-23T19:23:10`;
-`2008-01-23`; `2008-01`; `2008`.
+`2008-01-23`; `2008-01`; `2008`. If no date is available, use the string `not
+provided`.
 
 ### `geographic location (country and/or sea)`
 
@@ -84,7 +97,7 @@ ID should have the following structure: name of the institution (institution
 code) followed by the collection code (if available) and the voucher id
 (`institution_code:collection_code:voucher_id`). Please note institution codes
 and collection codes are taken from a controlled vocabulary maintained by the
-INSDC: <https://ftp.ncbi.nih.gov/pub/taxonomy/biocollections/>
+INSDC: <https://ftp.ncbi.nih.gov/pub/taxonomy/biocollections/>.
 
 ### `sub_species`
 
