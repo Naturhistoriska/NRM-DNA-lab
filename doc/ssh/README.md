@@ -1,6 +1,6 @@
 # SSH and SCP
 
-- Last modified: ons sep 27, 2023  05:16
+- Last modified: tis apr 30, 2024  10:28
 - Sign: JN
 
 ## SSH
@@ -26,21 +26,13 @@ empty for now.
 The result are two files, `id_ed25519` and `id_ed25519.pub`. They are both text
 files and can be opened with a text editor.
 
-#### Generate a local key pair using MobaXTerm on Windows
+### Generate a local key pair on Windows
 
-Note: If you have the option of using ubuntu in WSL2, use that instead of
-MobaXTerm!  The key-generation and usage is non-trivial with MobaXTerm.
+**Note:** I (JN) no longer promote users using MobaXterm for communicating
+with other unix computers. Main reason being having problems setting up
+ssh-keys (and that you gain so much more using wls2 instead).
 
-Note: before generating the SSH key, set a permanent home directory in
-MobaXTerm where to store the SSH key and other settings. This way they will be
-available after closing MobaXterm: Settings -> Configuration -> General.
-
-- <https://vlaams-supercomputing-centrum-vscdocumentation.readthedocs-hosted.com/en/latest/access/generating_keys_with_mobaxterm.html>
-- <https://stackoverflow.com/questions/70680445/why-does-ssh-add-fail-on-mobaxterm-is-it-a-permissions-issue>
-
-(select "ed25519")
-
-The generated key pair is located in XXX.
+Open Ubuntu (via WLS2), and follow the instructions for Linux above.
 
 ### Set up passwordless ssh communication
 
