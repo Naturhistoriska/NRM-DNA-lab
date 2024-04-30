@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: tis apr 30, 2024  10:15
+- Last modified: tis apr 30, 2024  10:18
 - Sign: nylander
 
 ## Description
@@ -177,7 +177,7 @@ and feature/mywork.
     $ git branch -d feature/mywork
     $ git branch -D test
 
-### Even more robust version
+## Even more robust version
 
 The ultimate way of collaborating with code and text is for someone else to
 review the changes you made to a common branch. The reviewer can then either
