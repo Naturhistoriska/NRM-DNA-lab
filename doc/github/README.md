@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: tis mar 26, 2024  04:15
+- Last modified: tis apr 30, 2024  10:13
 - Sign: nylander
 
 ## Description
@@ -90,6 +90,7 @@ above.
         $ rm old/init.sh
 
 2. Add the newly created GitHub-repository as "remote"
+
         $ git remote add origin git@github.com:Naturhistoriska/johan-n-snake-project.git
         $ git branch -M main
 
