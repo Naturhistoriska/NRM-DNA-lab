@@ -1,6 +1,6 @@
-# Working with the compute resources at UPPMAX
+# Working with remote compute resources
 
-- Last modified: tis apr 30, 2024  10:55
+- Last modified: tis apr 30, 2024  10:56
 - Sign: nylander
 
 **Note**: The resources below (rackham) will be [decommissioned during

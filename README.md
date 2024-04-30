@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard Workflows
 
-- Last modified: tis mar 26, 2024  03:25
+- Last modified: tis apr 30, 2024  11:01
 - Sign: JN
 
 ---
@@ -55,11 +55,7 @@ machines are available.
 
 See descriptions in [doc/ngi/README.md](doc/ngi/README.md).
 
-## Data Download from NGI to NRM-backup using DDS
-
-See descriptions in [doc/dds/README.md](doc/dds/README.md).
-
-## Data Download from NGI to Rackham using DDS
+## Data Download from NGI using DDS
 
 See descriptions in [doc/dds/README.md](doc/dds/README.md).
 
@@ -96,5 +92,4 @@ submitted a properly filled out sample sheet in the very start of the project
 
 Example for submitting short-read (Illumina) data to ENA:
 [doc/ena/README.md](doc/ena/README.md).
-
 
