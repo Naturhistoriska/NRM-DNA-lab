@@ -1,7 +1,12 @@
-# README.md
+# Working with the compute resources at UPPMAX
 
-- Last modified: ons sep 27, 2023  05:48
+- Last modified: tis apr 30, 2024  10:55
 - Sign: nylander
+
+**Note**: The resources below (rackham) will be [decommissioned during
+2024](https://www.uppmax.uu.se/uppmax-news/?tarContentId=1069594).  The general
+procedures for the next system (most probably ["Dardel and Klemming"]()) will
+be similar as for rackham, but the instructions below needs to be updated.
 
 ## Description
 
@@ -25,7 +30,7 @@ When you log in to rackham, you will reside on one of a handful of *login
 nodes*. The login nodes are connected to a large number of *compute nodes*.
 When you need to run a process that is CPU- and/or memory demanding, you do
 that by specifying the commands in a file, which you then submit to a
-queue-system (SLURM).  Depending on availability, your job is then reciding in
+queue-system (SLURM).  Depending on availability, your job is then waiting in
 the queue for a while until it is send to one or several compute nodes.
 
 On the login nodes nodes, you will have a standard Linux file structure with a
