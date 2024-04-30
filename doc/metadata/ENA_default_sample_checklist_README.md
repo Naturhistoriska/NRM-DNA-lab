@@ -1,6 +1,6 @@
 # Fields in the ENA (extended) data sheet
 
-- Last modified: tis apr 30, 2024  01:07
+- Last modified: tis apr 30, 2024  01:30
 - Sign: JN
 
 Reference: <https://www.ebi.ac.uk/ena/submit/webin/app-checklist/sample/true>
@@ -64,7 +64,7 @@ provided`.
 
 The location the sample was collected from with the intention of sequencing, as
 defined by the country or sea. Country or sea names should be chosen from the
-INSDC country list (<http://insdc.org/country.html>).
+INSDC country list (<https://www.ncbi.nlm.nih.gov/genbank/collab/country/>).
 
 ## Additional fields
 
