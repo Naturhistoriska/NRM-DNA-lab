@@ -17,12 +17,12 @@
 - [ ] Account on nrmdna01.nrm.se (ask NRM IT. You need to provide "your public
   ed25519 SSH key" (see [ssh](../ssh/README.md) or ask JN))
 - [ ] Functioning (NRM) VPN client if working remotely (consult NRM IT)
-- [ ] Personal account on uppmax
-  (<https://www.uppmax.uu.se/support/getting-started/applying-for-a-user-account/>).
-  Here is a link for practicing working on uppmax resources:
-  <https://uppsala.instructure.com/courses/67267>.
+- [ ] Personal account on uppmax. **NOTE** rackham (provided by uppmax) is being
+       decomissioned during 2024.
+      You still need still, however, to first register at <https://supr.naiss.se>,
+      so you can apply for access to a new system (most probably "Dardel").
 - [ ] Member of projects `nrmdnalab_storage` and `nrmdnalab` on rackham
-  (uppmax, ask JN or BC)
+  (uppmax, ask JN or BC. See also note about rackham being decomissioned above.)
 - [ ] Start to learn and use documentation in [Markdown
   syntax](https://www.markdownguide.org/getting-started/).
 
