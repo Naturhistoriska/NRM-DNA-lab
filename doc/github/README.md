@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: tis apr 30, 2024  10:18
+- Last modified: 24 Oct 2024
 - Sign: nylander
 
 ## Description
