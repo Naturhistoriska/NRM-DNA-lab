@@ -55,7 +55,7 @@ where you have the private key part):
 
 # Create or clone a new repository
 
-## 1. Create a project repository on GitHub.com/Naturhistoriska
+## 1. Create a (new) project repository on GitHub.com/Naturhistoriska
 
 Here we will create a new, private, and empty repository for a project on github.
 
@@ -114,16 +114,35 @@ above.
 
         $ git push -u origin main
 
-## Cloning a project
+## Cloning an existing project
 
-For cloning a project that you are supposed to work with, and contribute to,
-needs to be clones using accreditation with github (we are often cloning
-private repositories).  This assumes a user setup with ssh-keys for
-authentication. See this
+For cloning a **public** repository (from github.com/Naturhistoriska to local), you can do
+
+    $ git clone https://github.com/Naturhistoriska/public_repo_example.git
+
+If the repository is **private**, you need to set up credentials with SSH-keys. See this
 [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-for help.
+for help. After this is done, you can clone using this syntax:
 
-    $ git clone git@github.com:Naturhistoriska/johan-n-snake-project.git
+    $ git clone git@github.com:Naturhistoriska/private_repo_example.git
+
+## Cloning a repository for collaborative work
+
+If you need to clone a repository on which several group members need to work, then this is somewhat more involved.
+In short, you need to make sure created files and folders have the correct permissions for all group members.
+Here is an example on dardel.pdc.kth.se, and common project folder `nrmdnalab_storage`.
+To access the common project folder, it is assumed that all users are members of the group `pg_nrmdnalab_storage`
+(check the output of the command `groups` to confirm your access):
+
+    $ cd /cfs/klemming/projects/supr/nrmdnalab_storage
+    $ git clone --config core.sharedRepository=true git@github.com:Naturhistoriska/private_repo_example.git
+    $ chgrp -R pg_nrmdnalab_storage private_repo_example
+    $ chmod -R g+wX private_repo_example
+    $ find private_repo_example -type d -exec chmod g+s {} +
+    
+**Note:** In principle, the first `--config` argument to `git clone` should take care of it all.
+The other commands will have to be done by the user (owner) of the initiated files and folders.
+If one run into problems, those may have to be repeated (JN: largely untested).
 
 ---
 
