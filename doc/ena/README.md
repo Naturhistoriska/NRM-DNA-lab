@@ -1,6 +1,6 @@
 # ENA Data Submission
 
-- Last modified: mån apr 29, 2024  05:06
+- Last modified: tis nov 05, 2024  04:37
 - Sign: nylander
 
 ## Description
@@ -76,9 +76,10 @@ Then see
    `library_source`, `library_selection`, `library_strategy`, `library_layout`,
    `forward_file_name`, `forward_file_md5`, `reverse_file_name`,
    `reverse_file_md5`), or seen in this example
-   [`fastq2_template_xxxx.tsv`](fastq2_template_xxxx.tsv).
+   [`ENA_fastq2_template_xxxx.tsv`](ENA_fastq2_template_xxxx.tsv).
 
-2. Fill out the columns in the template.
+2. Fill out the columns in the template. One example can be found here:
+   [`ENA_fastq2_template_Azure.tsv`](ENA_fastq2_template_Azure.tsv)
 
 TEXT HERE
 
@@ -94,7 +95,7 @@ TEXT HERE
 On nrmdna01.nrm.se:
 
         $ myfolder='/projects/BIO-projects/johanyla/tmp/submission'
-        $ myfile='fastq2_template_1699967766479.tsv'
+        $ myfile='ENA_fastq2_template_1699967766479.tsv'
 
         $ mkdir -p "$myfolder"
         $ cd "$myfolder"
