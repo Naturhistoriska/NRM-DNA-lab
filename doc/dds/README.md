@@ -1,6 +1,6 @@
 # Data Download from NGI using DDS
 
-- Last modified: tis nov 21, 2023
+- Last modified: mån feb 10, 2025  09:12
 - Sign: bodicron
 
 
@@ -104,9 +104,32 @@ Invite other users to a project
 - <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
 - <https://scilifelabdatacentre.github.io/dds_cli/>
 
+## Data download from NGI to Dardel
+
+*For data downloads on Dardel, please log into the dedicated file transfer
+node: <dardel-ftn01.pdc.kth.se>.  Do NOT submit data-transfer jobs to the
+queueing system, run them directly on that node.*
+
+### Steps
+
+1. If the PI have a storage and/or compute account on dardel, make sure to be
+   added to the project (apply on <https://supr.naiss.se>). Otherwise, make sure
+   you have access to `/cfs/klemming/projects/supr/nrmdnalab_storage`.
+2. Log in to the the special "data transfer node <dardel-ftn01.pdc.kth.se>
+3. Check before you start that there are still storage space left (check with
+  `projinfo`).
+4. Create a new project folder (e.g., under
+   `/cfs/klemming/projects/supr/nrmdnalab_storage/projects`). One way of doing that can be seen in
+   this example (using `ptemplate`
+   <https://gist.github.com/nylander/beff8f66d3b5c30c6c3ec732688e5373>):
+   `ptemplate myproject`
+5. Change directory to where the data should be downloaded (e.g. `raw_data`)
+6. Load the `dds` program using the dardel module system: `module load dds-cli`
+7. Start the client: `dds`
+
 ## Data download from NGI to rackham
 
-- <https://scilifelabdatacentre.github.io/dds_cli/>
+*Note:from 2025, only people affiliated with Uppsala university have access to rackham*
 
 ### Steps
 
@@ -125,7 +148,4 @@ Invite other users to a project
    bioinfo-tools dds-cli`
 6. Start the client: `dds`
 
-### Links
-
-- <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
 
