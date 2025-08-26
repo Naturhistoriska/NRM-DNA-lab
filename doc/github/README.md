@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: 24 Oct 2024
+- Last modified: tis aug 26, 2025  12:12
 - Sign: nylander
 
 ## Description
@@ -82,7 +82,7 @@ later push the files in this repository to our empty github repository created
 above.
 
 1. Create a project file hierarchy by cloning a [project
-   template](https://github.com/nylander/NRM-ptemplate).
+   template](https://github.com/Naturhistoriska/NRM-ptemplate).
 
         $ git clone https://github.com/Naturhistoriska/NRM-ptemplate.git johan-n-snake-project
         $ cd johan-n-snake-project
