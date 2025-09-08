@@ -1,6 +1,6 @@
 # NRM DNA lab - Standard Workflows
 
-- Last modified: tis apr 30, 2024  11:01
+- Last modified: mån sep 08, 2025  04:20
 - Sign: JN
 
 ---
@@ -62,6 +62,10 @@ See descriptions in [doc/dds/README.md](doc/dds/README.md).
 ## Copy Files Between Computers
 
 See description in [doc/ssh/README.md](doc/ssh/README.md).
+
+## Backup of sequence data at NRM
+
+See description in [doc/backup/README.md](doc/backup/README.md).
 
 ## Quality Control of Sequence Data
 
