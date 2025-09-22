@@ -139,7 +139,7 @@ TEXT HERE
 Open <https://www.ebi.ac.uk/ena/submit/webin/read-submission>,
 click on "Upload filled spreadsheet template for Read submission" and
 "Upload filled spreadsheet template for Read submission".
-Select `PRJEB64275.tsv`.
+Select your study register tsv file (e.g. `PRJEB64275.tsv`).
 
 ### Links
 
