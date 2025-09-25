@@ -125,6 +125,9 @@ If the repository is **private**, you need to set up credentials with SSH-keys. 
 for help. After this is done, you can clone using this syntax:
 
     $ git clone git@github.com:Naturhistoriska/private_repo_example.git
+    
+**Note:** If you clone a public repository, and wish to be able to push changes directly to it (given that you have write permissions), you need to clone the repo using the second method (`git clone git@github.com:`).
+
 
 ## Cloning a repository for collaborative work
 
