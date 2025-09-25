@@ -156,7 +156,6 @@ If one run into problems, those may have to be repeated (JN: largely untested).
 Start every session by checking if you are up to date, and on the correct
 branch!
 
-    $ git branch
     $ git status
     $ git fetch
     $ git status
