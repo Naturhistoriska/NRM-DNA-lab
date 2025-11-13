@@ -1,6 +1,6 @@
 # git and GitHub
 
-- Last modified: Sept 25 2025
+- Last modified: 2025-11-13 10:23:54
 - Sign: nylander
 
 ## Description
@@ -8,14 +8,14 @@
 Make sure to join the Naturhistoriska organization on GitHub:
 <https://github.com/Naturhistoriska> Basically, create a personal account on
 GitHub, then fill out
-[Bestallningsblankett-2017-V2.pdf](Bestallningsblankett-2017-V2.pdf)
-(don't forget your GitHub user name) and send to Dept. head. Tell JN when
-approved.
+[Bestallningsblankett-2017-V2.pdf](Bestallningsblankett-2017-V2.pdf) (don't
+forget your GitHub user name) and send to Dept. head. Tell JN when approved.
 
 Also make sure to be added to the github team `NRM-DNA-lab` within the
 Naturhistoriska github organization (ask JN).
 
-You may then create public or private repositories under github.com/Naturhistoriska.
+You may then create public or private repositories under
+github.com/Naturhistoriska.
 
 # Setup
 
@@ -57,7 +57,8 @@ where you have the private key part):
 
 ## 1. Create a (new) project repository on GitHub.com/Naturhistoriska
 
-Here we will create a new, private, and empty repository for a project on github.
+Here we will create a new, private, and empty repository for a project on
+github.
 
 1. Open a web browser
 2. Create a new project
@@ -95,13 +96,16 @@ above.
         $ git branch -M main
 
 2. Edit the `README.md` file and add the relevant description of the project.
-3. Use the `Notebook.md` file for running notes on analyses. A
-   link to the Notebook can be added in the README.md by using the syntax `[link
-   to Notebook.md](Notebook.md)`.
-4. Add any other relevant files for the project.
-   **Warning: Make sure no files with sensitive or private content are added!**
-   Project information not intended for github can be placed in the folder `private/`, which is not under git control.
-   Safest is to add files one by one using `git add filename`, but below we add all at once:
+
+3. Use the `Notebook.md` file for running notes on analyses. A link to the
+   Notebook can be added in the README.md by using the syntax `[link to
+   Notebook.md](Notebook.md)`.
+
+4. Add any other relevant files for the project.  **Warning: Make sure no files
+   with sensitive or private content are added!** Project information not
+   intended for github can be placed in the folder `private/`, which is not
+   under git control.  Safest is to add files one by one using `git add
+   filename`, but below we add all at once:
 
         $ git status
         $ git add --all
@@ -116,36 +120,43 @@ above.
 
 ## Cloning an existing project
 
-For cloning a **public** repository (from github.com/Naturhistoriska to local), you can do
+For cloning a **public** repository (from github.com/Naturhistoriska to local),
+you can do
 
     $ git clone https://github.com/Naturhistoriska/public_repo_example.git
 
-If the repository is **private**, you need to set up credentials with SSH-keys. See this
+If the repository is **private**, you need to set up credentials with SSH-keys.
+See this
 [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 for help. After this is done, you can clone using this syntax:
 
     $ git clone git@github.com:Naturhistoriska/private_repo_example.git
-    
-**Note:** If you clone a public repository, and wish to be able to push changes directly to it (given that you have write permissions), you need to clone the repo using the second method (`git clone git@github.com:`).
 
+**Note:** If you clone a public repository, and wish to be able to push changes
+directly to it (given that you have write permissions), you need to clone the
+repo using the second method (`git clone git@github.com:`).
 
 ## Cloning a repository for collaborative work
 
-If you need to clone a repository on which several group members need to work, then this is somewhat more involved.
-In short, you need to make sure created files and folders have the correct permissions for all group members.
-Here is an example on dardel.pdc.kth.se, and common project folder `nrmdnalab_storage`.
-To access the common project folder, it is assumed that all users are members of the group `pg_nrmdnalab_storage`
-(check the output of the command `groups` to confirm your access):
+If you need to clone a repository on which several group members need to work,
+then this is somewhat more involved.  In short, you need to make sure created
+files and folders have the correct permissions for all group members.  Here is
+an example on dardel.pdc.kth.se, and common project folder `nrmdnalab_storage`.
+To access the common project folder, it is assumed that all users are members
+of the group `pg_nrmdnalab_storage` (check the output of the command `groups`
+to confirm your access!):
 
     $ cd /cfs/klemming/projects/supr/nrmdnalab_storage
     $ git clone --config core.sharedRepository=true git@github.com:Naturhistoriska/private_repo_example.git
     $ chgrp -R pg_nrmdnalab_storage private_repo_example
     $ chmod -R g+wX private_repo_example
     $ find private_repo_example -type d -exec chmod g+s {} +
-    
-**Note:** In principle, the first `--config` argument to `git clone` should take care of it all.
-The other commands will have to be done by the user (owner) of the initiated files and folders.
-If one run into problems, those may have to be repeated (JN: largely untested).
+    $ git config --global --add safe.directory /cfs/klemming/projects/supr/nrmdnalab_storage/private_repo_example
+
+**Note:** In principle, the first `--config` argument to `git clone` should
+take care of it all.  The other commands will have to be done by the user
+(owner) of the initiated files and folders.  If one run into problems, those
+may have to be repeated (JN: largely untested).
 
 ---
 
@@ -171,7 +182,8 @@ Then:
 
 ## More robust version
 
-(Given that we are up-to-date on branch `main`), start by creating a "working" branch
+(Given that we are up-to-date on branch `main`), start by creating a "working"
+branch
 
     $ git checkout -b feature/mywork
 
