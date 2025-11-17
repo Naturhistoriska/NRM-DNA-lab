@@ -1,7 +1,7 @@
 # Data Download from NGI using DDS
 
-- Last modified: mån feb 10, 2025  09:12
-- Sign: bodicron
+- Last modified: 2025-11-17 09:15:52
+- Sign: nylander
 
 
 ## Background
@@ -106,46 +106,24 @@ Invite other users to a project
 
 ## Data download from NGI to Dardel
 
-*For data downloads on Dardel, please log into the dedicated file transfer
+For data downloads on Dardel, **please log into the dedicated file transfer
 node: <dardel-ftn01.pdc.kth.se>.  Do NOT submit data-transfer jobs to the
-queueing system, run them directly on that node.*
+queueing system, run them directly on that node**.
 
 ### Steps
 
 1. If the PI have a storage and/or compute account on dardel, make sure to be
-   added to the project (apply on <https://supr.naiss.se>). Otherwise, make sure
-   you have access to `/cfs/klemming/projects/supr/nrmdnalab_storage`.
-2. Log in to the the special "data transfer node <dardel-ftn01.pdc.kth.se>
+   added to the project (apply on <https://supr.naiss.se>). Otherwise, make
+   sure you have access to `/cfs/klemming/projects/supr/nrmdnalab_storage`.
+2. Log in to the the special "data transfer node" <dardel-ftn01.pdc.kth.se>
 3. Check before you start that there are still storage space left (check with
-  `projinfo`).
+   `projinfo`).
 4. Create a new project folder (e.g., under
-   `/cfs/klemming/projects/supr/nrmdnalab_storage/projects`). One way of doing that can be seen in
-   this example (using `ptemplate`
-   <https://gist.github.com/nylander/beff8f66d3b5c30c6c3ec732688e5373>):
-   `ptemplate myproject`
+   `/cfs/klemming/projects/supr/nrmdnalab_storage/projects`).  Easy ways of
+   doing this can be seen here
+   <https://github.com/Naturhistoriska/NRM-DNA-lab/tree/main/doc/github#2-create-a-new-project-locally>,
+   or here <https://gist.github.com/nylander/beff8f66d3b5c30c6c3ec732688e5373>.
 5. Change directory to where the data should be downloaded (e.g. `raw_data`)
 6. Load the `dds` program using the dardel module system: `module load dds-cli`
 7. Start the client: `dds`
-
-## Data download from NGI to rackham
-
-*Note:from 2025, only people affiliated with Uppsala university have access to rackham*
-
-### Steps
-
-1. If the PI have a storage and/or compute account on rackham, make sure to be
-   added to the project (apply on <https://supr.naiss.se>). Otherwise, make sure
-   you have access to `/proj/nrmdnalab_storage`.
-2. Check before you start that there are still storage space left (check with
-  `uquota`).
-3. Create a new project folder (e.g., under
-   `/proj/nrmdnalab_storage/nobackup/`). One way of doing that can be seen in
-   this example (using `ptemplate`
-   <https://gist.github.com/nylander/beff8f66d3b5c30c6c3ec732688e5373>):
-   `ptemplate myproject`
-4. Change directory to where the data should be downloaded (e.g. `raw_data`)
-5. Load the `dds` program using the rackham module system: `module load
-   bioinfo-tools dds-cli`
-6. Start the client: `dds`
-
 
