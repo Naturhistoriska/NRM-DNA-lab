@@ -1,6 +1,6 @@
 # Data Download from NGI using DDS
 
-- Last modified: 2025-11-17 09:15:52
+- Last modified: 2025-11-17 10:23:24
 - Sign: nylander
 
 
@@ -107,7 +107,7 @@ Invite other users to a project
 ## Data download from NGI to Dardel
 
 For data downloads on Dardel, **please log into the dedicated file transfer
-node: <dardel-ftn01.pdc.kth.se>.  Do NOT submit data-transfer jobs to the
+node: <dardel-ftn.pdc.kth.se>.  Do NOT submit data-transfer jobs to the
 queueing system, run them directly on that node**.
 
 ### Steps

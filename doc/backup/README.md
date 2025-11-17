@@ -1,14 +1,14 @@
 # Backup of raw sequence data on NRM
 
-- Last modified: mån sep 08, 2025  04:17
+- Last modified: 2025-11-17 10:55:33
 - Sign: nylander
 
 ## Description
 
 NRM does provide a backup server for raw sequencing data, `nrmdna01.nrm.se`.
 This computer is reachable only from within the NRM firewall with the
-exceptions for connections with rackham.uppmax.uu.se, dardel.pdc.kth.se, and
-the DDS data delivery service.
+exceptions for connections with `rackham.uppmax.uu.se`, `dardel.pdc.kth.se`, and
+the [DDS data delivery service](https://delivery.scilifelab.se/).
 
 Raw sequencing data can be stored under department-specific folders under
 `/projects`. Currently the following structure is available:
@@ -29,10 +29,10 @@ to and from the server can then be made using, e.g., `rsync`, `scp`, `dds_cli`.
 
 To gain access,
 
-1. Send an e-mail to NRM-IT asking "I would like to have access to the NRM DNA
+1. Send an e-mail to `NRM-IT` asking "I would like to have access to the NRM DNA
    backup server, Thank you", and provide (in the same e-mail) your public
    ed25519 ssh key (`id_ed25519.pub`).
-2. After NRM-IT have set up the access, login to `nrmdna01.nrm.se` (using your
+2. After `NRM-IT` have set up the access, login to `nrmdna01.nrm.se` (using your
    NRM Windows user name) with `ssh`,
 3. Create a user folder under the correct department folder. For example, if
    belonging to "ZOO": `mkdir -p /projects/ZOO-projects/$USER`,
