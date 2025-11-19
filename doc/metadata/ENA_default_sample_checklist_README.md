@@ -1,6 +1,6 @@
 # Fields in the ENA (extended) data sheet
 
-- Last modified: 2025-11-19 15:11:30
+- Last modified: 2025-11-19 15:45:17
 - Sign: JN
 
 Reference: <https://www.ebi.ac.uk/ena/submit/webin/app-checklist/sample/true>
@@ -45,7 +45,7 @@ the sample sheet for submitting samples for sequencing at NGI (see
 
 ### `sample_title`
 
-Title of the sample. Here I have used a longer name still containing as much
+Title of the sample. Here I have used a longer name containing as much
 information as possible, but still useful in downstream analyses. For example,
 one may consider combining `scientific_name` + `sample_alias` and also perhaps
 `specimen_voucher` (if not too complicated): `Genus_species_GS01_NRM12345`.
