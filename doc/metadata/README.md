@@ -1,6 +1,6 @@
 # Metadata
 
-- Last modified: ons sep 27, 2023  05:13
+- Last modified: 2025-11-19 11:19:55
 - Sign: nylander
 
 ## Description
@@ -37,8 +37,8 @@ here for the default sample example:
 
 **Important**
 
-- For `sample_alias`, do not use special characters or white space, and make
-  sure those entries are unique.
+- For `sample_alias`, **do not use special characters or white space, and make
+  sure those entries are unique**.
 - New taxon? Use a place-holder name, e.g., `Genus sp_nov_1`. More details on
   new taxa can be found here:
   <https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html>.
