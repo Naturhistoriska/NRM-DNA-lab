@@ -1,18 +1,18 @@
 # ENA Data Submission
 
-- Last modified: tis nov 05, 2024  04:37
+- Last modified: 2025-11-19 15:28:40
 - Sign: nylander
 
 ## Description
 
 In addition to the fastq files that needs to be submitted, we need metadata
 information (for the fastq files), but also information on the study from the
-PI. The necessary pices of information is listed below. For details on the
-checklist, see below.
+PI (see file [`Study_info_to_be_provided.md`](Study_info_to_be_provided.md)).
+The necessary pieces of information is listed below.
 
 - [ ] Sample sheet from PI (see [metadata](../metadata/README.md))
 - [ ] Location of fastq files (most probably on nrmdna01.nrm.se)
-- [ ] Release date (se notes below)
+- [ ] Release date (see notes below)
 - [ ] Short descriptive study title (from PI)
 - [ ] Study name (from PI)
 - [ ] Detailed study abstract (from PI)
@@ -30,7 +30,7 @@ Login to the [Webin portal](https://www.ebi.ac.uk/ena/submit/webin). Under
 
 Fill out (need to consult the PI for text!)
 
- - [ ] Release date (se notes below)
+ - [ ] Release date (see notes below)
  - [ ] Short descriptive study title
  - [ ] Study name
  - [ ] Detailed study abstract.
