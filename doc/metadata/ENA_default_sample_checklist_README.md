@@ -1,6 +1,6 @@
 # Fields in the ENA (extended) data sheet
 
-- Last modified: tis apr 30, 2024  01:30
+- Last modified: 2025-11-19 15:11:30
 - Sign: JN
 
 Reference: <https://www.ebi.ac.uk/ena/submit/webin/app-checklist/sample/true>
@@ -45,7 +45,10 @@ the sample sheet for submitting samples for sequencing at NGI (see
 
 ### `sample_title`
 
-Title of the sample.
+Title of the sample. Here I have used a longer name still containing as much
+information as possible, but still useful in downstream analyses. For example,
+one may consider combining `scientific_name` + `sample_alias` and also perhaps
+`specimen_voucher` (if not too complicated): `Genus_species_GS01_NRM12345`.
 
 ### `sample_description`
 
@@ -74,7 +77,11 @@ Tissue type from which the sample was obtained.
 
 ### `lat_lon`
 
-Geographical coordinates of the location where the specimen was collected.
+Geographical coordinates of the location where the specimen was collected. The
+preferred format for latitude and longitude in submissions is decimal degrees,
+with a positive value for North latitude and East longitude, and a negative
+value for South latitude and West longitude. This information is typically
+provided combined as `lat_lon` (e.g., `40.7128,-74.0060`).
 
 ### `collected_by`
 
