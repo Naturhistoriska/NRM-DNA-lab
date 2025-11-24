@@ -1,6 +1,6 @@
 # Fields in the ENA (extended) data sheet
 
-- Last modified: 2025-11-19 15:45:17
+- Last modified: 2025-11-24 16:19:27
 - Sign: JN
 
 Reference: <https://www.ebi.ac.uk/ena/submit/webin/app-checklist/sample/true>
@@ -8,6 +8,18 @@ Reference: <https://www.ebi.ac.uk/ena/submit/webin/app-checklist/sample/true>
 These are the fields present in the default [ENA sample sheet,
 `ENA_default_sample_checklist.tsv`](ENA_default_sample_checklist.tsv), given
 some additions.
+
+**Note** The International Nucleotide Database Collaboration (INSDC) have a
+[standardised missing/null value reporting language to be used where a value of
+an expected format for sample metadata reporting can not be
+provided.](https://www.insdc.org/technical-specifications/missing-value-reporting/)
+
+Two examples:
+
+- `missing: not collected`. To be used when information of an expected format
+  was not given because it has not been collected.
+- `missing: not provided`. To be used when information of an expected format
+  was not given, but a value may be given at the later stage.
 
 ## Mandatory fields
 
@@ -52,7 +64,8 @@ one may consider combining `scientific_name` + `sample_alias` and also perhaps
 
 ### `sample_description`
 
-Description of the sample.
+Description of the sample. This is a "free text" field. One example: "E. coli
+blood sample".
 
 ### `collection date`
 
@@ -60,8 +73,7 @@ The date the sample was collected with the intention of sequencing, either as
 an instance (single point in time) or interval. In case no exact time is
 available, the date/time can be right truncated i.e. all of these are valid
 ISO8601 compliant times: `2008-01-23T19:23:10+00:00`; `2008-01-23T19:23:10`;
-`2008-01-23`; `2008-01`; `2008`. If no date is available, use the string `not
-provided`.
+`2008-01-23`; `2008-01`; `2008`.
 
 ### `geographic location (country and/or sea)`
 
@@ -81,7 +93,9 @@ Geographical coordinates of the location where the specimen was collected. The
 preferred format for latitude and longitude in submissions is decimal degrees,
 with a positive value for North latitude and East longitude, and a negative
 value for South latitude and West longitude. This information is typically
-provided combined as `lat_lon` (e.g., `40.7128,-74.0060`).
+provided combined as `lat_lon` (e.g., `40.7128,-74.0060`). There are online
+converters available to help with this task. See e.g.
+<https://applications.pgc.umn.edu/convert/>.
 
 ### `collected_by`
 
