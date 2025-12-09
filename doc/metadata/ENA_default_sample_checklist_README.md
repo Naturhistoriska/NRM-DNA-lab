@@ -1,13 +1,13 @@
 # Fields in the ENA (extended) data sheet
 
-- Last modified: 2025-11-24 16:19:27
+- Last modified: 2025-12-09 11:12:36
 - Sign: JN
 
 Reference: <https://www.ebi.ac.uk/ena/submit/webin/app-checklist/sample/true>
 
 These are the fields present in the default [ENA sample sheet,
-`ENA_default_sample_checklist.tsv`](ENA_default_sample_checklist.tsv), given
-some additions.
+`ENA_default_sample_checklist_XXXXX.tsv`](ENA_default_sample_checklist_XXXXX.tsv),
+given some additions.
 
 **Note** The International Nucleotide Database Collaboration (INSDC) have a
 [standardised missing/null value reporting language to be used where a value of

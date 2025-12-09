@@ -1,13 +1,13 @@
 # ENA Data Submission
 
-- Last modified: 2025-11-19 15:28:40
+- Last modified: 2025-12-09 11:09:35
 - Sign: nylander
 
 ## Description
 
 In addition to the fastq files that needs to be submitted, we need metadata
 information (for the fastq files), but also information on the study from the
-PI (see file [`Study_info_to_be_provided.md`](Study_info_to_be_provided.md)).
+PI (see file [`Study_info_XXXXX.md`](Study_info_XXXXX.md)).
 The necessary pieces of information is listed below.
 
 - [ ] Sample sheet from PI (see [metadata](../metadata/README.md))
@@ -76,7 +76,7 @@ Then see
    `library_source`, `library_selection`, `library_strategy`, `library_layout`,
    `forward_file_name`, `forward_file_md5`, `reverse_file_name`,
    `reverse_file_md5`), or seen in this example
-   [`ENA_fastq2_template_xxxx.tsv`](ENA_fastq2_template_xxxx.tsv).
+   [`ENA_fastq2_template_XXXXX.tsv`](ENA_fastq2_template_XXXXX.tsv).
 
 2. Fill out the columns in the template. One example can be found here:
    [`ENA_fastq2_template_Azure.tsv`](ENA_fastq2_template_Azure.tsv)
