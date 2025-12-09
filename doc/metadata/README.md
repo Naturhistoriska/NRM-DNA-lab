@@ -1,6 +1,6 @@
 # Metadata
 
-- Last modified: 2025-11-19 11:19:55
+- Last modified: 2025-12-09 10:33:21
 - Sign: nylander
 
 ## Description
@@ -25,10 +25,8 @@ the password!
    section of Optional Fields. Some/many of the Optional fields can be vary
    valuable to collect in one place.). Then click on `Next`, followed by
    `Download TSV Template`.  An example of the minimal ENA sample tsv template
-   file (30 Sept 2023) can be found here:
-   [`ENA_default_sample_checklist.tsv`](ENA_default_sample_checklist.tsv), and
-   a submitted sample checklist can be found here:
-   [`ENA_sample_checklist_Azure.tsv`](ENA_sample_checklist_Azure.tsv).
+   file (Dec 2025) can be found here:
+   [`ENA_default_sample_checklist_PROJNAME.tsv`](ENA_default_sample_checklist_PROJNAME.tsv)
 4. Open the file in, e.g., MS Excel and add samples.
 
 Detailed information for each field can be found in the step **3.** above, or
