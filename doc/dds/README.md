@@ -1,8 +1,7 @@
 # Data Download from NGI using DDS
 
-- Last modified: 2025-11-17 10:23:24
+- Last modified: 2025-12-10 12:02:39
 - Sign: nylander
-
 
 ## Background
 
@@ -37,7 +36,6 @@ Once the delivery has expired, it is automatically removed from DDS."
 procedure to get one is for the PI to list you as a member or bioinformatician
 when *data is ordered* (**TODO:** add details).
 
-
 ## Data download from NGI to NRM-backup using DDS
 
 ### Steps
@@ -71,6 +69,25 @@ when *data is ordered* (**TODO:** add details).
         $ find /projects/BIO-projects/piname -type d -exec chmod o+rx {} \;
         $ chmod -R -w /projects/BIO-projects/piname
 
+10. If you downloaded data for a PI in your own folder, *the PI* then needs to
+    transfer the the data to his/her own folder! First make sure others have
+    read access to the folder and files, then run a rsync locally followed by a
+    md5-sum check. For example (`myuser` is your user name, `PIuser` is the PI,
+    `DEPT` is the department):
+
+        myuser$ chmod -R o+r /projects/BIO-projects/myuser/folder-for-other-PI
+
+        PIuser$ cd /projects/DEPT-projects/PIuser
+        PIuser$ screen -S transfer
+        PIuser$ rsync -n -rvhP /projects/BIO-projects/myuser/folder-for-other-PI .
+        PIuser$ # Press Ctrl+A followed by Ctrl+D
+        # When finished, log back in
+        PIuser$ screen -R transfer
+        PIuser$ check_md5sums.sh
+        # When finished, exit screen and logout
+        PIuser$ exit
+        PIuser$ exit
+
 ### Using the dds client
 
 **Note** You need to supply your registered user, password, and one-time-code
@@ -103,6 +120,7 @@ Invite other users to a project
 - <https://scilifelabdatacentre.github.io/dds_cli/examples/>
 - <https://ngisweden.scilifelab.se/resources/data-delivery-dds/>
 - <https://scilifelabdatacentre.github.io/dds_cli/>
+- <https://github.com/nylander/check_md5sums>
 
 ## Data download from NGI to Dardel
 
