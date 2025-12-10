@@ -1,6 +1,6 @@
 # Data Download from NGI using DDS
 
-- Last modified: 2025-12-10 12:02:39
+- Last modified: 2025-12-10 12:05:55
 - Sign: nylander
 
 ## Background
@@ -80,6 +80,7 @@ when *data is ordered* (**TODO:** add details).
         PIuser$ cd /projects/DEPT-projects/PIuser
         PIuser$ screen -S transfer
         PIuser$ rsync -n -rvhP /projects/BIO-projects/myuser/folder-for-other-PI .
+        PIuser$ rsync -rvhP /projects/BIO-projects/myuser/folder-for-other-PI .
         PIuser$ # Press Ctrl+A followed by Ctrl+D
         # When finished, log back in
         PIuser$ screen -R transfer
